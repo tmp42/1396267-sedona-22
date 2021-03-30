@@ -49,88 +49,96 @@
 </header>
 <main class="page-main">
   <h1 class="visually-hidden">СЕДОНА — небольшой городок в Аризоне</h1>
-  <div class="wrapper">
-    <div class="lead lead--photogallery">
-      <h2 class="lead__title">Фото и видео</h2>
-      <p class="lead__caption">Не можете решиться на путешествие из-за курса? фотографии помогут вам забыть о политике и
-        экономике</p>
-    </div>
-    <section class="photos">
-      <h2 class="visually-hidden">Фотографии Седоны</h2>
-      <ul class="photos__list">
-        <li class="photos__item photos__item--first post">
-          <a class="photos__link" href="#">
-          <img alt="123">
-          <div class="post__text">
-            <div class="post__description">
-              <b class="post__title">Неродные просторы</b>
-              <p class="ppost__author">Автор фото: Борис</p>
-            </div>
-            <div class="post__likes">
-              <p>1330</p>
-            </div>
-          </div>
-          </a>
-        </li>
-        <li class="photos__item post">
-          <a class="photos__link" href="#">
-          <img alt="123">
-          <div class="post__text">
-            <div class="post__description">
-              <b class="post__title">Местная растительность</b>
-              <p class="post__author">Автор фото: Сергей</p>
-            </div>
-            <div class="post__likes">
-              <p>143</p>
-            </div>
-          </div>
-          </a>
-        </li>
-        <li class="photos__item post">
-          <a class="photos__link" href="#">
-          <img alt="123">
-          <div class="post__text">
-            <div class="post__description">
-              <b class="post__title">Дорога на север</b>
-              <p class="post__author">Автор фото: Петр</p>
-            </div>
-            <div class="post__likes">
-              <p>96</p>
-            </div>
-          </div>
-          </a>
-        </li>
-        <li class="photos__item post">
-          <a class="photos__link" href="#">
-          <img alt="123">
-          <div class="post__text">
-            <div class="post__description">
-              <b class="post__title">Мост дьявола</b>
-              <p class="post__author">Автор фото: Антон</p>
-            </div>
-            <div class="post__likes">
-              <p>1330</p>
-            </div>
-          </div>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <section class="video">
-      <h2 class="video__title">Все еще сомневаетесь?</h2>
-      <p class="video_description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
-        раз!</p>
-      <div class="video__item">
-        <img alt="Видео Седоны">
-        <div class="video__control">
-          <button class="video__button"></button>
-          <div class="video__progress-bar"></div>
-          <button class="video__button"></button>
-          <button class="video__button"></button>
-        </div>
-      </div>
-    </section>
+  <div class="lead lead--photogallery">
+    <h2 class="lead__title">Фото и видео</h2>
+    <p class="lead__caption">Не можете решиться на путешествие из-за курса? фотографии помогут вам забыть о политике и
+      экономике</p>
   </div>
+  <section class="gallery">
+    <h2 class="visually-hidden">Фотографии Седоны</h2>
+    <ul class="gallery__list">
+      <li class="gallery__item gallery-card">
+        <a class="gallery-card__link" href="#">
+          <img alt="123">
+        </a>
+        <div class="gallery-card__content">
+          <div class="gallery-card__info">
+            <b class="gallery-card__name">Неродные просторы</b>
+            <p class="gallery-card__author">Автор фото: Борис</p>
+          </div>
+          <div class="gallery-card__action like-btn">
+            <svg class="like-btn__ico"></svg>
+            <span class="like-btn__count">1330</span>
+          </div>
+        </div>
+      </li>
+      <li class="gallery__item gallery-card">
+        <a class="gallery-card__link" href="#">
+          <img alt="123">
+        </a>
+        <div class="gallery-card__content">
+          <div class="gallery-card__info">
+            <b class="gallery-card__name">Местная растительность</b>
+            <p class="gallery-card__author">Автор фото: Сергей</p>
+          </div>
+          <div class="gallery-card__action like-btn">
+            <svg class="like-btn__ico"></svg>
+            <span class="like-btn__count">143</span>
+          </div>
+        </div>
+      </li>
+      <li class="gallery__item gallery-card">
+        <a class="gallery-card__link" href="#">
+          <img alt="123">
+        </a>
+        <div class="gallery-card__content">
+          <div class="gallery-card__info">
+            <b class="gallery-card__name">Дорога на север</b>
+            <p class="gallery-card__author">Автор фото: Петр</p>
+          </div>
+          <div class="gallery-card__action like-btn">
+            <svg class="like-btn__ico"></svg>
+            <span class="like-btn__count">96</span>
+          </div>
+        </div>
+      </li>
+      <li class="gallery__item gallery-card">
+        <a class="gallery-card__link" href="#">
+          <img alt="123">
+        </a>
+        <div class="gallery-card__content">
+          <div class="gallery-card__info">
+            <b class="gallery-card__name">Мост дьявола</b>
+            <p class="gallery-card__author">Автор фото: Антон</p>
+          </div>
+          <div class="gallery-card__action like-btn">
+            <svg class="like-btn__ico"></svg>
+            <span class="like-btn__count">1330</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="video">
+    <div class="lead lead--video">
+      <h2 class="lead__title">Все еще сомневаетесь?</h2>
+      <p class="lead__caption">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
+        раз!</p>
+    </div>
+    <div class="video-player">
+      <div class="video-player__screen"></div>
+      <div class="video-player__substrate"></div>
+      <div class="video-player__control">
+        <button class="video-player__button video-player__button--replay" aria-label="Повторить"></button>
+        <div class="video-player__progress-bar">
+          <div class="video-player__scale"></div>
+          <div class="video-player__progress-toggle"></div>
+        </div>
+        <button class="video-player__button video-player__button--cc" aria-label="Показать субтитры"></button>
+        <button class="video-player__button video-player__button--fullscreen" aria-label="На весь экран"></button>
+      </div>
+    </div>
+  </section>
 </main>
 <footer class="page-footer">
   <div class="page-footer__wrapper">
