@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Седона</title>
+</head>
+<body class="page__body">
+<header class="page-header">
+  <div class="wrapper">
+    <a class="page-header__logo">
+      <img src="img/logotype-mobile.svg" width="102" height="84" alt="Седона»">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item site-list__item--active">
+            <a>
+              Главная
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="photo.html">
+              Фото и видео
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="form.html">
+              Форма отзыва
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">
+              Контакты
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">
+              HTML Academy
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="main-image">
+      <img class="main-image__banner" src="img/text-sedona-index.svg" alt="123" width="460" height="350">
+    </div>
+  </div>
+</header>
+<main class="page-main">
+  <h1 class="visually-hidden">СЕДОНА — небольшой городок в Аризоне</h1>
+  <div class="lead lead--photogallery">
+    <h2 class="lead__title">Фото и видео</h2>
+    <p class="lead__caption">Не можете решиться на путешествие из-за курса? фотографии помогут вам забыть о политике и
+      экономике</p>
+  </div>
+  <section class="gallery">
+    <h2 class="visually-hidden">Фотографии Седоны</h2>
+    <ul class="gallery__list">
+      <li class="gallery__item gallery-card">
+        <a class="gallery-card__link" href="#">
+          <img alt="123">
+        </a>
+        <div class="gallery-card__content">
+          <div class="gallery-card__info">
+            <b class="gallery-card__name">Неродные просторы</b>
+            <p class="gallery-card__author">Автор фото: Борис</p>
+          </div>
+          <div class="gallery-card__action like-btn">
+            <svg class="like-btn__ico"></svg>
+            <span class="like-btn__count">1330</span>
+          </div>
+        </div>
+      </li>
+      <li class="gallery__item gallery-card">
+        <a class="gallery-card__link" href="#">
+          <img alt="123">
+        </a>
+        <div class="gallery-card__content">
+          <div class="gallery-card__info">
+            <b class="gallery-card__name">Местная растительность</b>
+            <p class="gallery-card__author">Автор фото: Сергей</p>
+          </div>
+          <div class="gallery-card__action like-btn">
+            <svg class="like-btn__ico"></svg>
+            <span class="like-btn__count">143</span>
+          </div>
+        </div>
+      </li>
+      <li class="gallery__item gallery-card">
+        <a class="gallery-card__link" href="#">
+          <img alt="123">
+        </a>
+        <div class="gallery-card__content">
+          <div class="gallery-card__info">
+            <b class="gallery-card__name">Дорога на север</b>
+            <p class="gallery-card__author">Автор фото: Петр</p>
+          </div>
+          <div class="gallery-card__action like-btn">
+            <svg class="like-btn__ico"></svg>
+            <span class="like-btn__count">96</span>
+          </div>
+        </div>
+      </li>
+      <li class="gallery__item gallery-card">
+        <a class="gallery-card__link" href="#">
+          <img alt="123">
+        </a>
+        <div class="gallery-card__content">
+          <div class="gallery-card__info">
+            <b class="gallery-card__name">Мост дьявола</b>
+            <p class="gallery-card__author">Автор фото: Антон</p>
+          </div>
+          <div class="gallery-card__action like-btn">
+            <svg class="like-btn__ico"></svg>
+            <span class="like-btn__count">1330</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="video">
+    <div class="lead lead--video">
+      <h2 class="lead__title">Все еще сомневаетесь?</h2>
+      <p class="lead__caption">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
+        раз!</p>
+    </div>
+    <div class="video-player">
+      <div class="video-player__screen"></div>
+      <div class="video-player__substrate"></div>
+      <div class="video-player__control">
+        <button class="video-player__button video-player__button--replay" aria-label="Повторить"></button>
+        <div class="video-player__progress-bar">
+          <div class="video-player__scale"></div>
+          <div class="video-player__progress-toggle"></div>
+        </div>
+        <button class="video-player__button video-player__button--cc" aria-label="Показать субтитры"></button>
+        <button class="video-player__button video-player__button--fullscreen" aria-label="На весь экран"></button>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="page-footer">
+  <div class="page-footer__wrapper">
+    <div class="page-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <p class="copyright__text">Разработано</p>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
