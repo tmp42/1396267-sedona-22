@@ -1,0 +1,45 @@
+.advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.advantages__image {
+  &:nth-child(2) {
+    grid-column: 2/4;
+  }
+
+  &:nth-child(4) {
+    grid-column: 1/3;
+  }
+}
+
+.advantages__block {
+  background-color: $blue-100;
+  color: $white-100;
+
+  &--grey{
+    background-color: $grey-100;
+    color: $color-black;
+  }
+}
+
+.advantages__name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.advantages__step {
+  font-size: 18px;
+  line-height: 26px;
+  color: inherit;
+}
+
+.advantages__text {
+  font-size: 18px;
+  line-height: 26px;
+  color: inherit;
+  text-transform: uppercase;
+}

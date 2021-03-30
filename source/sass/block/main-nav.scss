@@ -1,0 +1,28 @@
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-nav__item {
+  background-color: $blue-100;
+  box-shadow: $shadow;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $blue-200;
+  }
+
+  &--active {
+    color: $grey-200;
+  }
+}
+
+.main-nav__link {
+  text-decoration: none;
+  color: $white-100;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 40px;
+}
