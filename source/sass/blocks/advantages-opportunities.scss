@@ -1,0 +1,12 @@
+.advantages-opportunities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.advantages-opportunities__name {
+  font-weight: 700;
+}

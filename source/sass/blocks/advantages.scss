@@ -17,29 +17,21 @@
   background-color: $blue-100;
   color: $white-100;
 
-  &--grey{
+  &--grey {
     background-color: $grey-100;
     color: $color-black;
   }
 }
 
 .advantages__name {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 26px;
+  font-weight: 700;
   color: inherit;
-  text-transform: uppercase;
 }
 
 .advantages__step {
-  font-size: 18px;
-  line-height: 26px;
   color: inherit;
 }
 
 .advantages__text {
-  font-size: 18px;
-  line-height: 26px;
   color: inherit;
-  text-transform: uppercase;
 }
