@@ -1,0 +1,14 @@
+.button {
+  display: block;
+  padding: 15px 32px;
+
+  font-weight: 700;
+  font-size: 21px;
+  color: $white-100;
+  background-color: $blue-100;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $blue-200;
+  }
+}

@@ -1,0 +1,12 @@
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+
+  font-family: "PT Sans", "Arial", "Tahoma", sans-serif;
+  color: $color-black;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+}
