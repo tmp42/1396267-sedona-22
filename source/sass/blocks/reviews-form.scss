@@ -1,0 +1,138 @@
+.reviews-form__fieldset {
+  border: none;
+}
+
+.reviews-form__legend {
+  font-weight: 700;
+}
+
+.reviews-form__group {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &--impression {
+    margin-bottom: 14px;
+  }
+
+  &--places {
+    margin-bottom: 25px;
+  }
+
+  &--contacts {
+    flex-direction: column;
+  }
+}
+
+.reviews-form__label {
+  margin-right: 14px;
+
+  font-size: 14px;
+  line-height: 26px;
+
+  &--impression {
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 55px;
+      height: 55px;
+      bottom: 1px;
+      background-color: $grey-300;
+      border-radius: 50%;
+      margin-right: 23px;
+    }
+  }
+
+  &--places {
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 55px;
+      height: 55px;
+      bottom: 1px;
+      background-color: $grey-300;
+      margin-right: 23px;
+    }
+  }
+
+  &--emotions {
+    font-weight: 700;
+  }
+}
+
+.reviews-form__wrap {
+  width: 100%;
+}
+
+.reviews-form__field {
+  height: 54px;
+  width: 100%;
+  padding-left: 22px;
+  margin-top: 3px;
+
+  background-color: $grey-300;
+  border: none;
+  color: inherit;
+  font: inherit;
+
+  &::placeholder {
+    font-weight: 700;
+    color: $color-black;
+  }
+
+  &:hover {
+    background-color: $grey-400;
+  }
+
+  &:active {
+    outline: none;
+    background-color: $white-100;
+    border: 3px solid $grey-400;
+  }
+
+  &--emotions {
+    height: 160px;
+  }
+}
+
+/*Кастомная стилизация эффектов*/
+.reviews-form__field--impression:checked + .reviews-form__label--impression::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background-color: #000000;
+  border-radius: 50%;
+  margin-right: 23px;
+  left: 17px;
+  top: 16px;
+}
+
+.reviews-form__field--impression:hover + .reviews-form__label--impression::before {
+  background-color: $grey-400;
+  cursor: pointer;
+}
+
+.reviews-form__field--places:hover + .reviews-form__label--places::before {
+  background-color: $grey-400;
+  cursor: pointer;
+}
