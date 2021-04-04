@@ -7,8 +7,6 @@
 }
 
 .reviews-form__group {
-  position: relative;
-
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -30,15 +28,14 @@
   margin-right: 14px;
 
   font-size: 14px;
-  line-height: 26px;
 
   &--impression {
+    position: relative;
     display: flex;
     align-items: center;
 
     font-weight: 700;
     font-size: 18px;
-    line-height: 26px;
     text-transform: none;
 
     &::before {
@@ -54,12 +51,12 @@
   }
 
   &--places {
+    position: relative;
     display: flex;
     align-items: center;
 
     font-weight: 700;
     font-size: 18px;
-    line-height: 26px;
     text-transform: none;
 
     &::before {
@@ -83,16 +80,18 @@
 }
 
 .reviews-form__field {
-  height: 54px;
-  width: 100%;
+  min-height: 58px;
   padding-left: 22px;
   margin-top: 3px;
 
   background-color: $grey-300;
-  border: 3px solid $grey-300;
+  border: 3px solid transparent;
   color: inherit;
-  font: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
   font-weight: 700;
+  outline: none;
 
   &::placeholder {
     font-weight: 700;
@@ -101,7 +100,6 @@
 
   &:hover {
     background-color: $grey-400;
-    border: 3px solid $grey-400;
   }
 
   &:focus {
@@ -110,7 +108,16 @@
   }
 
   &--emotions {
+    width: 100%;
     height: 160px;
+  }
+
+  &--name {
+    width: 100%;
+  }
+
+  &--contacts {
+    width: 100%;
   }
 }
 
