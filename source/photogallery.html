@@ -2,49 +2,52 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
   <title>Седона</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 <header class="page-header">
-  <div class="wrapper">
-    <a class="page-header__logo">
-      <img src="img/logotype-mobile.svg" width="102" height="84" alt="Седона»">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item site-list__item--active">
-            <a>
-              Главная
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="photo.html">
-              Фото и видео
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html">
-              Форма отзыва
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">
-              Контакты
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">
-              HTML Academy
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="main-image">
-      <img class="main-image__banner" src="img/text-sedona-index.svg" alt="123" width="460" height="350">
+  <nav class="main-nav">
+    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--active">
+          <a class="main-nav__link">
+            Главная
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="photo.html">
+            Фото и видео
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">
+            Форма отзыва
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">
+            Контакты
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">
+            HTML Academy
+          </a>
+        </li>
+      </ul>
+      <a class="main-nav__logo" href="/">
+        <img src="#" alt="#" class="main-nav__logo-image">
+      </a>
+      <figure class="page-header__banner page-header__banner--page">
+        <img class="page-header__slogan" src="img/logotype-mobile.svg" width="102" height="84" alt="Седона»">
+      </figure>
     </div>
+  </nav>
+  <div class="main-image">
+    <img class="main-image__banner" src="img/text-sedona-index.svg" alt="123" width="460" height="350">
   </div>
 </header>
 <main class="page-main">
