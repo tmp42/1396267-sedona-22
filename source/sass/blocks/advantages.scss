@@ -1,6 +1,43 @@
 .advantages__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: block;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.advantages__block {
+  padding: 29px 0 39px;
+
+  background-color: $blue-100;
+  color: $white-100;
+
+  @media (min-width: $tablet) {
+    padding: 21px 0 43px;
+  }
+
+  &--grey {
+    position: relative;
+
+    background-color: $grey-100;
+    color: $color-black;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 20px;
+      bottom: 0;
+      width: 280px;
+      height: 1px;
+      background-color: $grey-500;
+
+      @media (min-width: $tablet) {
+        width: 1px;
+        height: 280px;
+      }
+    }
+  }
 }
 
 .advantages__image {
@@ -13,25 +50,47 @@
   }
 }
 
-.advantages__block {
-  background-color: $blue-100;
-  color: $white-100;
+.advantages__name {
+  margin-bottom: 8px;
 
-  &--grey {
-    background-color: $grey-100;
-    color: $color-black;
+  font-weight: 700;
+  color: inherit;
+  font-size: 18px;
+
+  @media (min-width: $tablet) {
+    padding: 24px 0 9px;
+    max-width: 203px;
+    margin: 0 auto;
+
+    font-size: 21px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 28px 0 9px;
   }
 }
 
-.advantages__name {
-  font-weight: 700;
-  color: inherit;
-}
-
 .advantages__step {
-  color: inherit;
+  margin: 0 0 16px;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 24px;
+  }
 }
 
 .advantages__text {
-  color: inherit;
+  margin: 0;
+  padding: 0;
+
+  line-height: 21px;
+
+  @media (min-width: $tablet) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 345px;
+    margin: 0 auto;
+  }
 }

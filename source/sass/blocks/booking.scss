@@ -1,10 +1,35 @@
+.booking {
+  padding: 0 20px;
+  text-align: -webkit-center;
+}
+
 .booking__title {
   font-weight: 700;
   font-size: 21px;
   color: $color-black;
+
+  @media (min-width: $tablet) {
+    margin-top: 56px;
+
+    font-size: 30px;
+    line-height: 26px;
+  }
 }
 
 .booking__text {
-  font-size: 21px;
+  margin-bottom: 23px;
+
   color: $color-black;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 38px;
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: inherit;
+    }
+  }
 }
