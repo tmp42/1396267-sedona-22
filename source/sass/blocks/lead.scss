@@ -1,14 +1,34 @@
 .lead {
-  padding: 0 24px;
   margin-bottom: 36px;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 20px * 2);
 
   @media (min-width: $tablet) {
-    padding: 0 90px;
     margin-bottom: 50px;
+    width: 100%;
   }
 
-  @media screen and (min-width: $desktop) {
+  @media (min-width: $desktop) {
     margin-bottom: 40px;
+  }
+
+  &--photogallery {
+    @media (min-width: $tablet) {
+      max-width: 458px;
+    }
+  }
+
+  &--video {
+    @media (min-width: $tablet) {
+      max-width: 445px;
+    }
+  }
+
+  &--reviews {
+    @media (min-width: $tablet) {
+      max-width: 434px;
+    }
   }
 }
 

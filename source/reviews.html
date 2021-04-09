@@ -8,12 +8,12 @@
 </head>
 <body class="page__body">
 <header class="page-header">
-  <nav class="main-nav">
+  <nav class="main-nav main-nav--closed main-nav--nojs">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active">
-          <a class="main-nav__link">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--active">
             Главная
           </a>
         </li>
@@ -29,11 +29,6 @@
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="#">
-            Контакты
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
             HTML Academy
           </a>
         </li>
@@ -41,7 +36,7 @@
       <a class="main-nav__logo" href="/">
         <img src="#" alt="#" class="main-nav__logo-image">
       </a>
-      <figure class="page-header__banner page-header__banner--page">
+      <figure class="page-header__banner">
         <img class="page-header__slogan" src="img/logotype-mobile.svg" width="102" height="84" alt="Седона»">
       </figure>
     </div>
@@ -125,29 +120,31 @@
       <legend class="reviews-form__legend reviews-form__legend--places">
         Посещенные достопримечательности:
       </legend>
-      <div class="reviews-form__group reviews-form__group--places">
-        <input class="visually-hidden reviews-form__field reviews-form__field--places" type="checkbox" name="check1" id="check1" checked="">
-        <label class="reviews-form__label reviews-form__label--places" for="check1">
-          Мост Дьявола
-        </label>
-      </div>
-      <div class="reviews-form__group reviews-form__group--places">
-        <input class="visually-hidden reviews-form__field reviews-form__field--places" type="checkbox" name="check2" id="check2" checked="">
-        <label class="reviews-form__label reviews-form__label--places" for="check2">
-          Гора-Колокол
-        </label>
-      </div>
-      <div class="reviews-form__group reviews-form__group--places">
-        <input class="visually-hidden reviews-form__field reviews-form__field--places" type="checkbox" name="check3" id="check3">
-        <label class="reviews-form__label reviews-form__label--places" for="check3">
-          Слайд-парк
-        </label>
-      </div>
-      <div class="reviews-form__group reviews-form__group--places">
-        <input class="visually-hidden reviews-form__field reviews-form__field--places" type="checkbox" name="check4" id="check4" checked="">
-        <label class="reviews-form__label reviews-form__label--places" for="check4">
-          Красные скалы
-        </label>
+      <div class="reviews-form__collection">
+        <div class="reviews-form__group reviews-form__group--places">
+          <input class="visually-hidden reviews-form__field reviews-form__field--places" type="checkbox" name="check1" id="check1" checked="">
+          <label class="reviews-form__label reviews-form__label--places" for="check1">
+            Мост Дьявола
+          </label>
+        </div>
+        <div class="reviews-form__group reviews-form__group--places">
+          <input class="visually-hidden reviews-form__field reviews-form__field--places" type="checkbox" name="check2" id="check2" checked="">
+          <label class="reviews-form__label reviews-form__label--places" for="check2">
+            Гора-Колокол
+          </label>
+        </div>
+        <div class="reviews-form__group reviews-form__group--places">
+          <input class="visually-hidden reviews-form__field reviews-form__field--places" type="checkbox" name="check3" id="check3">
+          <label class="reviews-form__label reviews-form__label--places" for="check3">
+            Слайд-парк
+          </label>
+        </div>
+        <div class="reviews-form__group reviews-form__group--places">
+          <input class="visually-hidden reviews-form__field reviews-form__field--places" type="checkbox" name="check4" id="check4" checked="">
+          <label class="reviews-form__label reviews-form__label--places" for="check4">
+            Красные скалы
+          </label>
+        </div>
       </div>
     </fieldset>
     <fieldset class="reviews-form__fieldset reviews-form__fieldset--emotions">
@@ -159,7 +156,7 @@
     </fieldset>
     <div class="reviews-form__wrap">
       <button class="button reviews-form__button" type="submit" value="Отправить отзыв">Отправить отзыв</button>
-      <span class="reviews-form__fieldset__note">* — обязательные поля</span>
+      <span class="reviews-form__note">* — обязательные поля</span>
     </div>
   </form>
 </main>
@@ -185,4 +182,20 @@
   </div>
 </footer>
 </body>
+<script>
+  let navMain = document.querySelector('.main-nav');
+  let navToggle = document.querySelector('.main-nav__toggle');
+
+  navMain.classList.remove('main-nav--nojs');
+
+  navToggle.addEventListener('click', function () {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
+</script>
 </html>

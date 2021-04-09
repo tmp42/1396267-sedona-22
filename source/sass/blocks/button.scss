@@ -1,6 +1,6 @@
 .button {
-  display: block;
-  padding: 14px 45px 18px 47px;
+  display: inline-block;
+  padding: 18px 30px 14px 31px;
 
   font: inherit;
   font-weight: 700;
@@ -10,13 +10,10 @@
   text-decoration: none;
   border: none;
   text-transform: uppercase;
+  text-align: center;
 
   &:hover {
     background-color: $blue-200;
     cursor: pointer;
-  }
-
-  @media (min-width: $tablet) {
-    max-width: 458px;
   }
 }

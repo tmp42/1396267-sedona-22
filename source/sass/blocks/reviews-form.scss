@@ -1,5 +1,46 @@
+.reviews-form {
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 60px;
+    width: calc(100% - 60px * 2);
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 66px;
+    width: calc(100% - 120px * 2);
+  }
+}
+
 .reviews-form__fieldset {
   border: none;
+
+  &--impression {
+    @media (min-width: $tablet) {
+      order: -1;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: $tablet) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &--places {
+    @media (min-width: $tablet) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &--emotions {
+    @media (min-width: $tablet) {
+      grid-column: 1 / -1;
+    }
+  }
 }
 
 .reviews-form__legend {
@@ -17,6 +58,14 @@
 
   &--places {
     margin-bottom: 25px;
+
+    @media (min-width: $tablet) {
+      width: calc(100% / 2 - 30px);
+    }
+
+    @media (min-width: $desktop) {
+      width: calc(100% / 4 - 30px);
+    }
   }
 
   &--contacts {
@@ -59,9 +108,14 @@
     font-size: 18px;
     text-transform: none;
 
+    @media (min-width: $tablet) {
+      margin-right: 0;
+    }
+
     &::before {
       content: "";
       display: inline-block;
+      flex-shrink: 0;
       width: 55px;
       height: 55px;
       bottom: 1px;
@@ -76,7 +130,28 @@
 }
 
 .reviews-form__wrap {
-  width: 100%;
+  width: calc(100% - 20px * 2);
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 1 / -1;
+  }
+}
+
+.reviews-form__collection {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 65px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
 }
 
 .reviews-form__field {
@@ -109,7 +184,8 @@
 
   &--emotions {
     width: 100%;
-    height: 160px;
+    min-height: 160px;
+    resize: none;
   }
 
   &--name {
@@ -118,6 +194,14 @@
 
   &--contacts {
     width: 100%;
+  }
+}
+
+.reviews-form__note {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
   }
 }
 
@@ -143,4 +227,13 @@
 .reviews-form__field--places:hover + .reviews-form__label--places::before {
   background-color: $grey-400;
   cursor: pointer;
+}
+
+.reviews-form__button {
+  display: block;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    max-width: 324px;
+  }
 }
