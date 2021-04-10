@@ -8,12 +8,12 @@
 </head>
 <body class="page__body">
 <header class="page-header">
-  <nav class="main-nav">
+  <nav class="main-nav main-nav--closed main-nav--nojs">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active">
-          <a class="main-nav__link">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--active">
             Главная
           </a>
         </li>
@@ -29,11 +29,6 @@
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="#">
-            Контакты
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
             HTML Academy
           </a>
         </li>
@@ -41,7 +36,7 @@
       <a class="main-nav__logo" href="/">
         <img src="#" alt="#" class="main-nav__logo-image">
       </a>
-      <figure class="page-header__banner page-header__banner--page">
+      <figure class="page-header__banner">
         <img class="page-header__slogan" src="img/logotype-mobile.svg" width="102" height="84" alt="Седона»">
       </figure>
     </div>
@@ -165,4 +160,20 @@
   </div>
 </footer>
 </body>
+<script>
+  let navMain = document.querySelector('.main-nav');
+  let navToggle = document.querySelector('.main-nav__toggle');
+
+  navMain.classList.remove('main-nav--nojs');
+
+  navToggle.addEventListener('click', function () {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
+</script>
 </html>
