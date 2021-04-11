@@ -33,8 +33,7 @@
       background-color: $grey-500;
 
       @media (min-width: $tablet) {
-        width: 1px;
-        height: 280px;
+        display: none;
       }
     }
   }
@@ -73,9 +72,23 @@
 .advantages__step {
   margin: 0 0 16px;
   padding: 0;
+  position: relative;
 
   @media (min-width: $tablet) {
     margin-bottom: 24px;
+  }
+
+  &::before,
+  &::after {
+    position: relative;
+    display: inline-block;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 8px;
+    height: 2px;
+    background-color: $white-100;
+    margin: 4px 4px;
   }
 }
 
@@ -92,5 +105,12 @@
   @media (min-width: $desktop) {
     max-width: 345px;
     margin: 0 auto;
+  }
+}
+
+.advantages__block--grey .advantages__step {
+  &::before,
+  &::after {
+    background-color: $color-black;
   }
 }
