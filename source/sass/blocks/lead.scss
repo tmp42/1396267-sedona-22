@@ -26,20 +26,27 @@
   }
 
   &--reviews {
+    margin-bottom: 31px;
+
     @media (min-width: $tablet) {
       max-width: 435px;
       margin-bottom: 84px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 57px;
     }
   }
 }
 
 .lead__title {
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 
   font-weight: 700;
   font-size: 18px;
 
   @media (min-width: $tablet) {
+    margin-bottom: 30px;
     font-size: 30px;
   }
 
