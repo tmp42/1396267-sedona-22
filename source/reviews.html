@@ -8,12 +8,12 @@
 </head>
 <body class="page__body">
 <header class="page-header">
-  <nav class="main-nav main-nav--closed main-nav--nojs">
+  <nav class="main-nav main-nav--opened main-nav--nojs">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">
+          <a class="main-nav__link main-nav__link--active">
             Главная
           </a>
         </li>
@@ -23,26 +23,21 @@
           </a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active">
+          <a class="main-nav__link" href="reviews.html">
             Форма отзыва
           </a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
+          <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">
             HTML Academy
           </a>
         </li>
       </ul>
       <a class="main-nav__logo" href="/">
-        <img src="#" alt="#" class="main-nav__logo-image">
       </a>
-      <figure class="page-header__banner">
-        <img class="page-header__slogan" src="img/logotype-mobile.svg" width="102" height="84" alt="Седона»">
-      </figure>
     </div>
   </nav>
   <div class="main-image">
-    <img class="main-image__banner" src="img/text-sedona-index.svg" alt="123" width="460" height="350">
   </div>
 </header>
 <main class="page-main">
@@ -64,12 +59,12 @@
         <input class="reviews-form__field reviews-form__field--name" type="text" name="firstname" id="firstname" placeholder="Петр" required="">
       </div>
       <div class="reviews-form__group">
-        <label class="reviews-form__label reviews-form__label--name" for="surname"> Фамилия:<sup>*</sup>
+        <label class="reviews-form__label reviews-form__label--name" for="surname"> Фамилия<sup>*</sup>:
         </label>
         <input class="reviews-form__field reviews-form__field--name" type="text" name="surname" id="surname" placeholder="Иванов">
       </div>
       <div class="reviews-form__group">
-        <label class="reviews-form__label reviews-form__label--name" for="midname"> Отчество:<sup>*</sup>
+        <label class="reviews-form__label reviews-form__label--name" for="midname"> Отчество:
         </label>
         <input class="reviews-form__field reviews-form__field--name" type="text" name="midname" id="midname" placeholder="Александрович">
       </div>
@@ -77,19 +72,21 @@
     <fieldset class="reviews-form__fieldset reviews-form__fieldset--contacts">
       <legend class="reviews-form__legend reviews-form__legend--contacts"> Контактная информация:
       </legend>
-      <div class="reviews-form__group reviews-form__group--contacts">
-        <label class="reviews-form__label reviews-form__label--contacts" for="phone"> Контактный телефон*:
-        </label>
-        <div class="reviews-form__wrap reviews-form__wrap--phone">
-          <input class="reviews-form__field reviews-form__field--contacts" type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}">
+      <div class="reviews-form__collection reviews-form__collection--contacts">
+        <div class="reviews-form__group reviews-form__group--contacts">
+          <label class="reviews-form__label reviews-form__label--contacts" for="phone"> <span>Контактный</span> телефон*:
+          </label>
+          <div class="reviews-form__wrap reviews-form__wrap--phone">
+            <input class="reviews-form__field reviews-form__field--contacts" type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}">
+          </div>
         </div>
-      </div>
-      <div class="reviews-form__group reviews-form__group--contacts">
-        <label class="reviews-form__label reviews-form__label--contacts" for="email">
-          Электронная почта*:
-        </label>
-        <div class="reviews-form__wrap reviews-form__wrap--mail">
-          <input class="reviews-form__field reviews-form__field--contacts" type="email" name="email" id="email" placeholder="Введите e-mail" pattern="[a-zA-Z]{2,}@[a-zA-Z]{2,}.[a-zA-Z]{2,}" required="">
+        <div class="reviews-form__group reviews-form__group--contacts">
+          <label class="reviews-form__label reviews-form__label--contacts" for="email">
+            Электронная почта*:
+          </label>
+          <div class="reviews-form__wrap reviews-form__wrap--mail">
+            <input class="reviews-form__field reviews-form__field--contacts" type="email" name="email" id="email" placeholder="Введите e-mail" pattern="[a-zA-Z]{2,}@[a-zA-Z]{2,}.[a-zA-Z]{2,}" required="">
+          </div>
         </div>
       </div>
     </fieldset>
@@ -148,9 +145,9 @@
       </div>
     </fieldset>
     <fieldset class="reviews-form__fieldset reviews-form__fieldset--emotions">
-      <label class="reviews-form__legend reviews-form__legend--emotions">
+      <legend class="reviews-form__legend reviews-form__legend--emotions">
         Опишите свои эмоции:
-      </label>
+      </legend>
       <textarea class="reviews-form__field reviews-form__field--emotions" name="overview" id="overview"
                 placeholder="Опишите подробно все свои восторги"></textarea>
     </fieldset>
