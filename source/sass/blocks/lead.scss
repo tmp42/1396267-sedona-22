@@ -27,14 +27,17 @@
 
   &--reviews {
     margin-bottom: 31px;
+    margin-top: 37px;
 
     @media (min-width: $tablet) {
       max-width: 435px;
       margin-bottom: 84px;
+      margin-top: 66px;
     }
 
     @media (min-width: $desktop) {
       margin-bottom: 57px;
+      margin-top: 97px;
     }
   }
 }
