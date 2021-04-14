@@ -14,7 +14,7 @@
   color: $white-100;
 
   @media (min-width: $tablet) {
-    padding: 21px 0 43px;
+    padding: 10px 0 43px;
   }
 
   &--grey {
@@ -40,6 +40,13 @@
 }
 
 .advantages__image {
+  max-height: 260px;
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    max-height: 256px;
+  }
+
   &:nth-child(2) {
     grid-column: 2/4;
   }
@@ -113,4 +120,8 @@
   &::after {
     background-color: $color-black;
   }
+}
+
+.advantages__photo {
+  width: 100%;
 }
