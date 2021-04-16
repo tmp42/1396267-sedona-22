@@ -30,6 +30,33 @@
       background-image: url("../img/bg-back-desktop@2x.jpg");
     }
   }
+
+  &::after {
+    position: absolute;
+    min-height: 57px;
+    width: 100%;
+    left: 0;
+    content: "";
+    bottom: 0;
+    background-image: url("../img/intro-triangle.svg");
+    background-position-x: center;
+  }
+
+  &--inner {
+    min-height: 158px;
+    width: 100%;
+    margin-bottom: 0;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    @media (min-width: $tablet) {
+      min-height: 290px;
+    }
+
+    @media (min-width: $desktop) {
+      min-height: 300px;
+    }
+  }
 }
 
 .page-header__slogan {
@@ -44,5 +71,20 @@
 
   @media (min-width: $desktop) {
     margin-top: 79px;
+  }
+
+  &--inner {
+    min-height: unset;
+    padding: 0 45px;
+    margin-top: 31px;
+
+    @media (min-width: $tablet) {
+      padding: 0;
+      margin-top: 97px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 102px;
+    }
   }
 }
