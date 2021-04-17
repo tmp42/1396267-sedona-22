@@ -1,0 +1,25 @@
+.video-player {
+  position: relative;
+}
+
+.video-player__control {
+  position: absolute;
+  bottom: 0;
+  max-width: 800px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba($color-black, 0.6);
+  height: 93px;
+}
+
+.video-player__button {
+  background: none;
+  border: none;
+
+  & svg{
+    fill: $white-100;
+  }
+}

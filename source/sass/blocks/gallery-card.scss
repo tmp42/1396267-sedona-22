@@ -7,4 +7,32 @@
 .gallery-card__author {
   font-size: 14px;
   line-height: 24px;
+  padding: 0;
+  margin: 0;
+  text-transform: none;
+  text-align: start;
+}
+
+.gallery-card__content {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    background-color: $grey-300;
+    padding: 14px 21px 16px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color-black, 0.3);
+    color: $white-100;
+  }
+}
+
+.gallery-card__action {
+  text-align: -webkit-right;
+  display: flex;
+  align-items: center;
 }

@@ -1,5 +1,15 @@
+.like-btn {
+  width: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .like-btn__count {
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
+}
+
+.like-btn__ico {
+  fill: $white-100;
 }

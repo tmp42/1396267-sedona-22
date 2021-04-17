@@ -1,3 +1,17 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  @media (min-width: $tablet) {
+    margin-top: 15px;
+  }
+}
+
 .copyright__text {
+  margin-top: 4px;
+  margin-right: 12px;
+
   font-size: 14px;
 }
+

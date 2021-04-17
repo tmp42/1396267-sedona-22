@@ -17,11 +17,20 @@
     @media (min-width: $tablet) {
       max-width: 458px;
     }
+
+    @media (min-width: $desktop) {
+      margin-top: 85px;
+      margin-bottom: 78px;
+    }
   }
 
   &--video {
     @media (min-width: $tablet) {
       max-width: 445px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 76px;
     }
   }
 
@@ -40,6 +49,23 @@
       margin-top: 97px;
     }
   }
+
+  &--main {
+    max-width: 259px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+
+    @media (min-width: $tablet) {
+      max-width: 485px;
+      margin-top: 48px;
+      margin-bottom: 53px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 39px;
+      margin-bottom: 42px;
+    }
+  }
 }
 
 .lead__title {
@@ -50,7 +76,7 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 30px;
-    font-size: 30px;
+    font-size: 21px;
   }
 
   @media (min-width: $desktop) {

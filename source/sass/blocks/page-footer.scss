@@ -2,3 +2,32 @@
   font-weight: 700;
   font-size: 21px;
 }
+
+.page-footer__wrapper {
+  width: calc(100% - 20px * 2);
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 60px * 2);
+    margin-top: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    width: calc(100% - 120px * 2);
+    margin-top: 26px;
+  }
+}
+
+.page-footer__social {
+  margin-top: 32px;
+  margin-right: 1px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $tablet) {
+    margin-top: 8px;
+    margin-right: 9px;
+  }
+}
