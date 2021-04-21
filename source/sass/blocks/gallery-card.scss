@@ -32,7 +32,7 @@
 }
 
 .gallery-card__action {
-  text-align: -webkit-right;
-  display: flex;
-  align-items: center;
+  position: absolute;
+  right: 21px;
+  bottom: 28px;
 }

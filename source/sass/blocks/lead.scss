@@ -15,8 +15,10 @@
 
   &--photogallery {
     @media (min-width: $tablet) {
-      max-width: 458px;
-    }
+      max-width: 435px;
+      margin-top: 65px;
+      margin-bottom: 76px;
+  }
 
     @media (min-width: $desktop) {
       margin-top: 85px;
@@ -26,10 +28,13 @@
 
   &--video {
     @media (min-width: $tablet) {
+      margin-top: 57px;
       max-width: 445px;
+      margin-bottom: 79px;
     }
 
     @media (min-width: $desktop) {
+      margin-top: 0;
       margin-bottom: 76px;
     }
   }
@@ -83,5 +88,17 @@
     max-width: 588px;
     margin: 0 auto;
     padding: 17px 0;
+  }
+
+  &--photogellary {
+    @media (min-width: $tablet) {
+      font-size: 30px;
+    }
+  }
+
+  &--video {
+    @media (min-width: $tablet) {
+      font-size: 30px;
+    }
   }
 }

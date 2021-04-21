@@ -1,0 +1,8 @@
+.video {
+  @media (min-width: $tablet) {
+    margin-bottom: 70px;
+  }
+  @media (min-width: $desktop) {
+    margin-bottom: 113px;
+  }
+}

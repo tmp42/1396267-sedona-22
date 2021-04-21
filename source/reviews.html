@@ -160,25 +160,55 @@
 </main>
 <footer class="page-footer">
   <div class="page-footer__wrapper">
+    <h3 class="page-footer__hashtag">
+      #visitsedona
+    </h3>
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"></a>
+          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">
+            <svg width="40%" height="19px">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"></a>
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+            <svg width="20%" height="19px">
+              <use xlink:href="#icon-facebook"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy"></a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy">
+            <svg width="50%" height="19px">
+              <use xlink:href="#icon-youtube"></use>
+            </svg>
+          </a>
         </li>
       </ul>
     </div>
     <div class="page-footer__copyright copyright">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <span class="copyright__text">Разработано</span>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09">
+          <use xlink:href="#icon-logo-htmlacademy"></use>
+        </svg></a>
     </div>
   </div>
 </footer>
+<section class="failure-pop-up">
+  <h2 class="failure-pop-up__title font-title font-title--big">Что-то пошло <br class="tablet-br">не так!</h2>
+  <p class="failure-pop-up__text">Проверьте поля выделенные красным, скорее всего вы забыли их заполнить.</p>
+  <button class="failure-pop-up__button button font-btn">Ok</button>
+</section>
+<section class="success-pop-up">
+  <h2 class="success-pop-up__title font-title font-title--big">Ваш отзыв отправлен!</h2>
+  <p class="success-pop-up__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+  <div class="success-pop-up__button-wrap">
+    <button class="success-pop-up__button button font-btn">Закрыть окно</button>
+  </div>
+</section>
 </body>
 <script>
   let navMain = document.querySelector('.main-nav');
@@ -195,5 +225,63 @@
       navMain.classList.remove('main-nav--opened');
     }
   });
+
+  "use strict";
+
+  var failurePopUp = document.querySelector(".failure-pop-up"),
+    successPopUp = document.querySelector(".success-pop-up");
+
+  var formFeedback = document.querySelector(".reviews-form"),
+    btn = document.querySelector(".reviews-form__button"),
+    inputs = formFeedback.querySelectorAll("input[required]");
+
+  failurePopUp.classList.remove("failure-pop-up--visible");
+  successPopUp.classList.remove("success-pop-up--visible");
+
+  console.log(inputs);
+
+  // заполнены важные поля
+  var ok = [];
+
+  //подписка за событие о заполнении инпутов
+  Array.from(inputs).forEach(function(el) {
+    el.addEventListener("change", function() {
+      if (ok.length == 3) {
+        btn.classList.remove("button-disable");
+      } else {
+        ok.push(el);
+      }
+    });
+  })
+
+  //обработка клика отправки формы -> показ модальных окон
+  btn.addEventListener("click", function(event) {
+    event.preventDefault();
+    if (btn.classList.contains("button-disable")) {
+      return;
+    } else {
+      var err = Array.from(inputs).find(function(el) {
+        el.value == "";
+      });
+
+      if (err) {
+        failurePopUp.classList.add("failure-pop-up--visible");
+      } else {
+        successPopUp.classList.add("success-pop-up--visible");
+        //функция отправки формы
+      }
+    }
+  })
+
+  //закрывает модальное окно
+  failurePopUp.querySelector(".failure-pop-up__button").addEventListener("click", function() {
+    failurePopUp.classList.remove("failure-pop-up--visible");
+  });
+
+  //закрывает модальное окно
+  successPopUp.querySelector(".success-pop-up__button").addEventListener("click", function() {
+    successPopUp.classList.remove("success-pop-up--visible");
+  });
+
 </script>
 </html>
