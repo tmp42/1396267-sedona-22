@@ -13,11 +13,9 @@ navToggle.addEventListener('click', function () {
   }
 });
 
-"use strict";
-
-var failurePopUp = document.querySelector(".failure-pop-up"),
-  successPopUp = document.querySelector(".success-pop-up");
-if (failurePopUp) {
+if(document.querySelector(".reviews-form__button")) {
+  var failurePopUp = document.querySelector(".failure-pop-up"),
+    successPopUp = document.querySelector(".success-pop-up");
   var formFeedback = document.querySelector(".reviews-form"),
     btn = document.querySelector(".reviews-form__button"),
     inputs = formFeedback.querySelectorAll("input[required]");
@@ -52,13 +50,13 @@ if (failurePopUp) {
       });
 
       if (err) {
-        failurePopUp.classList.add("failure-pop-up--visible");
+        failurePopUp.classList.add("success-pop-up--visible");
       } else {
         successPopUp.classList.add("failure-pop-up--visible");
         //функция отправки формы
       }
     }
-  })
+  });
 
 //закрывает модальное окно
   failurePopUp.querySelector(".failure-pop-up__button").addEventListener("click", function () {
@@ -70,27 +68,30 @@ if (failurePopUp) {
     successPopUp.classList.remove("success-pop-up--visible");
   });
 }
+
 //карта
-ymaps.ready(function () {
-  var myMap = new ymaps.Map("map", {
-      center: [34.86988272933305, -111.7604317883911],
-      zoom: 17
-    }, {
-      searchControlProvider: "yandex#search"
-    }),
+if(document.querySelector("#map")) {
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map("map", {
+        center: [34.86988272933305, -111.7604317883911],
+        zoom: 17
+      }, {
+        searchControlProvider: "yandex#search"
+      }),
 
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
-      // Опции.
-      // Необходимо указать данный тип макета.
-      iconLayout: "default#image",
-    });
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: "default#image",
+      });
 
-  myMap.controls.remove("geolocationControl");
-  myMap.controls.remove("searchControl");
-  myMap.controls.remove("trafficControl");
-  myMap.controls.remove("typeSelector");
-  myMap.controls.remove("fullscreenControl");
-  myMap.controls.remove("rulerControl");
-  myMap.behaviors.disable(["scrollZoom"]);
-  myMap.geoObjects.add(myPlacemark);
-});
+    myMap.controls.remove("geolocationControl");
+    myMap.controls.remove("searchControl");
+    myMap.controls.remove("trafficControl");
+    myMap.controls.remove("typeSelector");
+    myMap.controls.remove("fullscreenControl");
+    myMap.controls.remove("rulerControl");
+    myMap.behaviors.disable(["scrollZoom"]);
+    myMap.geoObjects.add(myPlacemark);
+  });
+}
