@@ -188,6 +188,10 @@
 
 .main-nav--opened .main-nav__logo {
   top: 224px;
+
+  @media (min-width: $tablet) {
+    top: 0;
+  }
 }
 
 .main-nav--nojs .main-nav__toggle {
