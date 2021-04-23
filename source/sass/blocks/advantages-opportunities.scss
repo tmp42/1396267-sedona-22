@@ -43,6 +43,11 @@
 
     @media (min-width: $tablet) {
       order: 0;
+      padding: 0 51px;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 0;
     }
   }
 
@@ -50,16 +55,6 @@
     display: block;
     text-align: center;
     margin-top: 59px;
-  }
-
-  &:nth-child(2) {
-    @media (min-width: $tablet) {
-      padding: 0 51px;
-    }
-
-    @media (min-width: $desktop) {
-      padding: 0;
-    }
   }
 }
 

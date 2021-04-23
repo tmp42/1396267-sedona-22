@@ -21,7 +21,7 @@
       max-width: 435px;
       margin-top: 65px;
       margin-bottom: 76px;
-  }
+    }
 
     @media (min-width: $desktop) {
       margin-top: 85px;
@@ -103,6 +103,12 @@
   }
 
   &--video {
+    @media (min-width: $tablet) {
+      font-size: 30px;
+    }
+  }
+
+  &--reviews {
     @media (min-width: $tablet) {
       font-size: 30px;
     }

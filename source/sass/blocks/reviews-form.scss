@@ -391,6 +391,42 @@
     grid-column: 1 / -1;
     width: 100%;
   }
+
+  &--phone {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 57px;
+      height: 57px;
+      background-color: #e5e5e5;
+      background-image: url("../img/icon-phone.svg");
+      background-position: 50% 45%;
+      background-repeat: no-repeat;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &--mail {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 57px;
+      height: 57px;
+      background-color: #e5e5e5;
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 45%;
+      bottom: 0;
+      right: 0;
+    }
+  }
 }
 
 .reviews-form__collection {
@@ -503,9 +539,37 @@
   cursor: pointer;
 }
 
+.reviews-form__field--impression:active + .reviews-form__label--impression::before {
+  background-color: $grey-700;
+  cursor: pointer;
+}
+
+.reviews-form__field--impression:active + .reviews-form__label--impression::after {
+  opacity: 0.3;
+}
+
 .reviews-form__field--places:hover + .reviews-form__label--places::before {
   background-color: $grey-400;
   cursor: pointer;
+}
+
+.reviews-form__field--places:active + .reviews-form__label--places::before {
+  background-color: $grey-700;
+  cursor: pointer;
+}
+
+.reviews-form__field--places:active + .reviews-form__label--places::after {
+  opacity: 0.3;
+}
+
+.reviews-form__field--places:checked + .reviews-form__label--places::after {
+  content: "";
+  position: absolute;
+  bottom: 13px;
+  left: 17px;
+  width: 22px;
+  height: 22px;
+  background: url("../img/icon-tick.svg") no-repeat;
 }
 
 .reviews-form__button {
