@@ -16,6 +16,18 @@
   &:last-child {
     margin-right: 0;
   }
+
+  &:hover {
+    background-color: $blue-600;
+  }
+
+  &:active {
+    background-color: $blue-700;
+
+    svg {
+      opacity: 0.3;
+    }
+  }
 }
 
 .social__link svg {

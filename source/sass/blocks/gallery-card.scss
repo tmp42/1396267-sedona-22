@@ -1,3 +1,19 @@
+.gallery-card {
+  &::after {
+    content: "";
+    position: absolute;
+    top: -23px;
+    left: -21px;
+    width: 320px;
+    height: 1px;
+    background-color: $grey-400;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
 .gallery-card__name {
   font-size: 14px;
   line-height: 24px;
@@ -14,11 +30,16 @@
 }
 
 .gallery-card__content {
+  display: block;
+  text-align: left;
+  margin-top: 9px;
+
   @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
     background-color: $grey-300;
     padding: 14px 21px 16px;
+    margin-top: 0;
   }
 
   @media (min-width: $desktop) {
@@ -32,7 +53,9 @@
 }
 
 .gallery-card__action {
-  position: absolute;
-  right: 21px;
-  bottom: 28px;
+  @media (min-width: $tablet) {
+    position: absolute;
+    right: 21px;
+    bottom: 28px;
+  }
 }

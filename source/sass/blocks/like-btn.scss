@@ -1,13 +1,25 @@
 .like-btn {
-  width: 64px;
+  margin-top: 11px;
+  width: 75px;
   display: flex;
+
+  @media (min-width: $tablet) {
+    width: 64px;
+    margin-top: 0;
+  }
 }
 
 .like-btn__count {
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
-  margin-left: 9px;
+  margin-top: 2px;
+  margin-left: 15px;
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
+    margin-left: 9px;
+  }
 }
 
 .like-btn__ico {

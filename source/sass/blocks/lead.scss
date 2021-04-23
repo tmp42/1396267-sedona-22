@@ -14,6 +14,9 @@
   }
 
   &--photogallery {
+    margin-top: 32px;
+    margin-bottom: 50px;
+
     @media (min-width: $tablet) {
       max-width: 435px;
       margin-top: 65px;
@@ -27,6 +30,9 @@
   }
 
   &--video {
+    max-width: 270px;
+    margin-bottom: 29px;
+
     @media (min-width: $tablet) {
       margin-top: 57px;
       max-width: 445px;

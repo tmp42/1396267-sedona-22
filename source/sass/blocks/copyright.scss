@@ -8,6 +8,22 @@
   }
 }
 
+.copyright__link {
+  &:hover {
+    svg {
+      fill: $blue-800;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    svg {
+      fill: $color-black;
+    }
+  }
+}
+
 .copyright__text {
   margin-top: 4px;
   margin-right: 12px;

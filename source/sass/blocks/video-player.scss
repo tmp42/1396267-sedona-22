@@ -8,19 +8,22 @@
 }
 
 .video-player__control {
-  position: absolute;
-  bottom: 0;
-  max-width: 800px;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  background-color: $grey-300;
   display: flex;
   justify-content: space-between;
-  background-color: rgba($color-black, 0.6);
-  height: 93px;
+  padding: 21px 0;
 
   @media (min-width: $tablet) {
+    padding: 0;
     max-width: 648px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba($color-black, 0.6);
+    height: 93px;
   }
 
   @media (min-width: $desktop) {
@@ -31,10 +34,44 @@
 .video-player__button {
   background: none;
   border: none;
-  margin-left: 20px;
+  margin-left: 31px;
+
+  @media (min-width: $tablet) {
+    margin-left: 20px;
+  }
 
   & svg {
-    fill: $white-100;
+    fill: $blue-500;
+
+    @media (min-width: $tablet) {
+      fill: $white-100;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    svg {
+      fill: $black-200;
+
+      @media (min-width: $tablet) {
+        fill: $white-100;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    svg {
+      fill: $black-200;
+
+      @media (min-width: $tablet) {
+        fill: $white-100;
+        opacity: 0.3;
+      }
+    }
   }
 
   &--fullscreen {
@@ -42,13 +79,22 @@
   }
 
   &--cc {
-    margin-right: -29px;
+    margin-left: auto;
+    margin-right: -17px;
+
+    @media (min-width: $tablet) {
+      margin-right: -8px;
+    }
   }
 }
 
 .video-player__scale {
-  margin-top: 30px;
-  margin-left: 9px;
+  margin-top: 5px;
+
+  @media (min-width: $tablet) {
+    margin-top: 30px;
+    margin-left: 9px;
+  }
 }
 
 .video-player__scale svg {
@@ -58,16 +104,37 @@
   @media (min-width: $tablet) {
     width: 389px;
   }
+
+  @media (min-width: $tablet) {
+    width: auto;
+  }
 }
 
 .video-player__progress-bar {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  position: absolute;
+  bottom: 65px;
+  background-color: rgba($color-black, 0.6);
+  left: 20px;
+  width: 280px;
+  height: 44px;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+  }
 }
 
 .video-player__progress-toggle {
   position: absolute;
-  bottom: 33px;
-  left: 121px;
+  bottom: 9px;
+  left: 57px;
+
+  @media (min-width: $tablet) {
+    bottom: 33px;
+    left: 121px;
+  }
 }
