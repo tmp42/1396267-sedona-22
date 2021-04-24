@@ -1,22 +1,29 @@
 .page-footer__hashtag {
   font-weight: 700;
   font-size: 21px;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    justify-self: start;
+  }
 }
 
 .page-footer__wrapper {
   width: calc(100% - 20px * 2);
   margin: 0 auto;
+  align-items: center;
+  padding-top: 37px;
 
   @media (min-width: $tablet) {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 151px 1fr;
     width: calc(100% - 60px * 2);
-    margin-top: 18px;
+    padding: 34px 0 25px;
   }
 
   @media (min-width: $desktop) {
     width: calc(100% - 120px * 2);
-    margin-top: 26px;
+    padding: 33px 0;
   }
 }
 

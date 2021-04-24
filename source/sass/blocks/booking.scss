@@ -1,7 +1,15 @@
 .booking {
   padding: 0 20px;
-  text-align: -webkit-center;
-  margin-bottom: 66px;
+  text-align: center;
+  margin-bottom: 49px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 66px;
+  }
 }
 
 .booking__title {

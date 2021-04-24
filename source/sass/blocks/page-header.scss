@@ -13,7 +13,7 @@
   @media (min-width: $tablet) {
     min-height: 516px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-size: contain;
+    background-size: cover;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
@@ -55,6 +55,7 @@
 
     @media (min-width: $desktop) {
       min-height: 300px;
+      background-position-y: bottom;
     }
   }
 }

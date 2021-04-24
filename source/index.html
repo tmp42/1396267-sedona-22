@@ -44,9 +44,6 @@
   </nav>
 </header>
 <main class="page-main">
-  <div style="display:none;">
-    <include src="build/img/sprite.svg"></include>
-  </div>
   <h1 class="visually-hidden">СЕДОНА — небольшой городок в Аризоне</h1>
   <div class="lead lead--main">
     <h2 class="lead__title">СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -62,8 +59,8 @@
       <div class="advantages__image">
         <picture>
           <source type="image/webp" media="(min-width: 1200px)" srcset="./img/main-city-desktop@1x.webp 1x, ./img/main-city-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="./img/main-city-desktop@1x.webp 1x, ./img/main-city-desktop@2x.webp 2x">
-          <source type="image/webp" srcset="./img/main-city-desktop@1x.webp 1x, ./img/main-city-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/main-city-tablet@1x.webp 1x, ./img/main-city-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="./img/main-city-mobile@1x.webp 1x, ./img/main-city-mobile@2x.webp 2x">
           <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
           <img class="advantages__photo" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Настоящий городок">
@@ -72,21 +69,21 @@
       <ul class="advantages__list advantages-opportunities">
         <li class="advantages-opportunities__item">
           <svg class="advantages-opportunities__ico" width="75px" height="72px">
-            <use xlink:href="#icon-house"></use>
+            <use href="img/sprite.svg#icon-house"></use>
           </svg>
           <h3 class="advantages-opportunities__name">Жилье</h3>
           <p class="advantages-opportunities__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </li>
         <li class="advantages-opportunities__item">
           <svg class="advantages-opportunities__ico" width="76px" height="72px">
-            <use xlink:href="#icon-burger"></use>
+            <use href="img/sprite.svg#icon-burger"></use>
           </svg>
           <h3 class="advantages-opportunities__name">Еда</h3>
           <p class="advantages-opportunities__text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
         </li>
         <li class="advantages-opportunities__item">
           <svg class="advantages-opportunities__ico" width="64px" height="75px">
-            <use xlink:href="#icon-gift"></use>
+            <use href="img/sprite.svg#icon-gift"></use>
           </svg>
           <h3 class="advantages-opportunities__name">Сувениры</h3>
           <p class="advantages-opportunities__text">Не только китайского,<br> но и местного производства!</p>
@@ -94,12 +91,12 @@
       </ul>
       <div class="advantages__image">
         <picture>
-          <source type="image/webp" media="(min-width: 1200px)" srcset="./img/main-bridge-desktop@1x.webp 1x, ./img/main-bridge-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="./img/main-bridge-desktop@1x.webp 1x, ./img/main-bridge-desktop@2x.webp 2x">
-          <source type="image/webp" srcset="./img/main-bridge-desktop@1x.webp 1x, ./img/main-bridge-desktop@2x.webp 2x">
-          <source media="(min-width: 1200px)" srcset="../img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="../img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
-          <img class="advantages__photo" src="../img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Настоящий городок">
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
+          <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+          <img class="advantages__photo" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Настоящий городок">
         </picture>
       </div>
       <div class="advantages__block">
@@ -132,7 +129,6 @@
     <a class="button booking__button" href="#">Найти гостиницу</a>
   </section>
   <section class="map" id="map">
-    <!--тут будет карта-->
   </section>
 </main>
 <footer class="page-footer">
@@ -140,37 +136,36 @@
     <h3 class="page-footer__hashtag">
       #visitsedona
     </h3>
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">
-            <svg width="40%" height="19px">
-              <use xlink:href="#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-            <svg width="20%" height="19px">
-              <use xlink:href="#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy">
-            <svg width="50%" height="19px">
-              <use xlink:href="#icon-youtube"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <ul class="social">
+      <li class="social__item">
+        <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy" aria-label="twitter">
+          <svg width="17px" height="14px">
+            <use href="img/sprite.svg#icon-twitter"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="facebook">
+          <svg width="8px" height="18px">
+            <use href="img/sprite.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy" aria-label="youtube">
+          <svg width="19px" height="14px">
+            <use href="img/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
     <div class="page-footer__copyright copyright">
       <span class="copyright__text">Разработано</span>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <svg width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09">
-        <use xlink:href="#icon-logo-htmlacademy"></use>
-      </svg></a>
+          <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
+        </svg>
+      </a>
     </div>
   </div>
 </footer>
