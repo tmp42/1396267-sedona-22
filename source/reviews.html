@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <title>Седона</title>
+  <link rel="preload" href="/fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
@@ -197,7 +199,7 @@
       <div class="reviews-form__group">
         <label class="reviews-form__label reviews-form__label--name" for="surname"> Фамилия<sup>*</sup>:
         </label>
-        <input class="reviews-form__field reviews-form__field--name" type="text" name="surname" id="surname" placeholder="Иванов">
+        <input class="reviews-form__field reviews-form__field--name" type="text" name="surname" id="surname" placeholder="Иванов" required="">
       </div>
       <div class="reviews-form__group">
         <label class="reviews-form__label reviews-form__label--name" for="midname"> Отчество:
@@ -213,7 +215,7 @@
           <label class="reviews-form__label reviews-form__label--contacts" for="phone"> <span>Контактный</span> телефон*:
           </label>
           <div class="reviews-form__wrap reviews-form__wrap--phone">
-            <input class="reviews-form__field reviews-form__field--contacts" type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}">
+            <input class="reviews-form__field reviews-form__field--contacts" type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}" required="">
           </div>
         </div>
         <div class="reviews-form__group reviews-form__group--contacts">
@@ -333,7 +335,7 @@
   </div>
 </footer>
 <section class="failure-pop-up">
-  <h2 class="failure-pop-up__title">Что-то пошло <br class="tablet-br">не так!</h2>
+  <h2 class="failure-pop-up__title">Что-то пошло&#160;<br>не так!</h2>
   <p class="failure-pop-up__text">Проверьте поля выделенные красным, скорее всего вы забыли их заполнить.</p>
   <button class="failure-pop-up__button button">Ok</button>
 </section>

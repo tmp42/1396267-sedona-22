@@ -13,7 +13,7 @@ navToggle.addEventListener('click', function () {
   }
 });
 
-if(document.querySelector(".reviews-form__button")) {
+if (document.querySelector(".reviews-form__button")) {
   var failurePopUp = document.querySelector(".failure-pop-up"),
     successPopUp = document.querySelector(".success-pop-up");
   var formFeedback = document.querySelector(".reviews-form"),
@@ -31,31 +31,20 @@ if(document.querySelector(".reviews-form__button")) {
 //подписка за событие о заполнении инпутов
   Array.from(inputs).forEach(function (el) {
     el.addEventListener("change", function () {
-      if (ok.length == 3) {
-        btn.classList.remove("button-disable");
-      } else {
-        ok.push(el);
-      }
+      ok.push(el);
     });
   })
 
 //обработка клика отправки формы -> показ модальных окон
   btn.addEventListener("click", function (event) {
     event.preventDefault();
-    if (btn.classList.contains("button-disable")) {
-      return;
-    } else {
-      var err = Array.from(inputs).find(function (el) {
-        el.value == "";
-      });
-
-      if (err) {
-        failurePopUp.classList.add("success-pop-up--visible");
+    var err = Array.from(inputs).find(function (el) {
+      if (el.value == "") {
+        failurePopUp.classList.add("failure-pop-up--visible");
       } else {
-        successPopUp.classList.add("failure-pop-up--visible");
-        //функция отправки формы
+        successPopUp.classList.add("success-pop-up--visible");
       }
-    }
+    });
   });
 
 //закрывает модальное окно
@@ -70,7 +59,7 @@ if(document.querySelector(".reviews-form__button")) {
 }
 
 //карта
-if(document.querySelector("#map")) {
+if (document.querySelector("#map")) {
   ymaps.ready(function () {
     var myMap = new ymaps.Map("map", {
         center: [34.86988272933305, -111.7604317883911],

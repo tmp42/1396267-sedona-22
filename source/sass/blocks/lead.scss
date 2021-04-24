@@ -46,17 +46,17 @@
   }
 
   &--reviews {
-    margin-bottom: 31px;
+    margin-bottom: 39px;
     margin-top: 37px;
 
     @media (min-width: $tablet) {
       max-width: 435px;
-      margin-bottom: 84px;
+      margin-bottom: 87px;
       margin-top: 66px;
     }
 
     @media (min-width: $desktop) {
-      margin-bottom: 57px;
+      margin-bottom: 61px;
       margin-top: 97px;
     }
   }
@@ -113,4 +113,8 @@
       font-size: 30px;
     }
   }
+}
+
+.lead__caption {
+  line-height: 24px;
 }
