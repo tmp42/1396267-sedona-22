@@ -18,14 +18,9 @@
 }
 
 .advantages__grid {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 33px;
-
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 0;
   }
 }
 
@@ -43,13 +38,14 @@
     padding-top: 48px;
   }
 
-  &:nth-child(5) {
+  &:nth-child(4) {
     padding-top: 22px;
     padding-bottom: 33px;
 
     @media (min-width: $tablet) {
       padding-top: 44px;
       padding-bottom: 39px;
+      grid-column: 3/-1;
     }
 
     @media (min-width: $desktop) {
@@ -78,10 +74,7 @@
     }
 
     @media (min-width: $desktop) {
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-top: 44px;
-      padding-bottom: 62px;
+      padding: 44px 20px 62px;
     }
 
     &::after {
@@ -134,15 +127,15 @@
   }
 
   &:nth-child(2) {
-    grid-column: 2/4;
+    @media (min-width: $tablet) {
+      grid-column: 2/4;
+    }
   }
 
-  &:nth-child(4) {
-    grid-column: 1/3;
-    order: 2;
-
+  &:nth-child(5) {
     @media (min-width: $tablet) {
-      order: 0;
+      grid-column: 1/3;
+      grid-row: 3/4;
     }
   }
 }

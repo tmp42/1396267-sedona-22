@@ -11,37 +11,40 @@
 <body class="page__body">
 <header class="page-header">
   <nav class="main-nav main-nav--opened main-nav--nojs">
-    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active">
-            Главная
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="photogallery.html">
-            Фото и видео
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="reviews.html">
-            Форма отзыва
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
-            HTML Academy
-          </a>
-        </li>
-      </ul>
-      <a class="main-nav__logo" href="/">
-      </a>
-      <figure class="page-header__banner">
-        <img class="page-header__slogan" src="../img/text-index.svg" width="460" height="250" alt="Седона»">
-      </figure>
-    </div>
+    <ul class="main-nav__list">
+      <li class="main-nav__item">
+        <a class="main-nav__link main-nav__link--active">
+          Главная
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="photogallery.html">
+          Фото и видео
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="reviews.html">
+          Форма отзыва
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="#">
+          HTML Academy
+        </a>
+      </li>
+    </ul>
+    <a class="main-nav__logo" aria-label="Седона">
+      <span class="visually-hidden">Седона</span>
+    </a>
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
   </nav>
+
+  <figure class="page-header__banner">
+    <img class="page-header__slogan" src="img/text-index.svg" width="460" height="250" alt="Седона">
+  </figure>
+
 </header>
 <main class="page-main">
   <h1 class="visually-hidden">СЕДОНА — небольшой городок в Аризоне</h1>
@@ -58,9 +61,11 @@
       </div>
       <div class="advantages__image">
         <picture>
-          <source type="image/webp" media="(min-width: 1200px)" srcset="./img/main-city-desktop@1x.webp 1x, ./img/main-city-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="./img/main-city-tablet@1x.webp 1x, ./img/main-city-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="./img/main-city-mobile@1x.webp 1x, ./img/main-city-mobile@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
           <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
           <img class="advantages__photo" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Настоящий городок">
@@ -68,41 +73,46 @@
       </div>
       <ul class="advantages__list advantages-opportunities">
         <li class="advantages-opportunities__item">
-          <svg class="advantages-opportunities__ico" width="75px" height="72px">
+          <svg class="advantages-opportunities__ico" width="75px" height="72px" viewBox="0 0 74.695 72.346">
             <use href="img/sprite.svg#icon-house"></use>
           </svg>
           <h3 class="advantages-opportunities__name">Жилье</h3>
           <p class="advantages-opportunities__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </li>
         <li class="advantages-opportunities__item">
-          <svg class="advantages-opportunities__ico" width="76px" height="72px">
+          <svg class="advantages-opportunities__ico" width="76px" height="72px" viewBox="0 0 76.166 68.959">
             <use href="img/sprite.svg#icon-burger"></use>
           </svg>
           <h3 class="advantages-opportunities__name">Еда</h3>
           <p class="advantages-opportunities__text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
         </li>
         <li class="advantages-opportunities__item">
-          <svg class="advantages-opportunities__ico" width="64px" height="75px">
+          <svg class="advantages-opportunities__ico" width="64px" height="75px" viewBox="0 0 63 75.084">
             <use href="img/sprite.svg#icon-gift"></use>
           </svg>
           <h3 class="advantages-opportunities__name">Сувениры</h3>
           <p class="advantages-opportunities__text">Не только китайского,<br> но и местного производства!</p>
         </li>
       </ul>
-      <div class="advantages__image">
-        <picture>
-          <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
-          <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
-          <img class="advantages__photo" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Настоящий городок">
-        </picture>
-      </div>
+
       <div class="advantages__block">
         <h3 class="advantages__name">Там есть<br> мост дьявола</h3>
         <p class="advantages__step">№2</p>
         <p class="advantages__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+      </div>
+      <div class="advantages__image">
+        <picture>
+          <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
+          <source media="(min-width: 1200px)"
+                  srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+                  srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+          <img class="advantages__photo" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Настоящий городок">
+        </picture>
       </div>
       <div class="advantages__block advantages__block--grey">
         <h3 class="advantages__name">Небольшая площадь</h3>
@@ -129,6 +139,7 @@
     <a class="button booking__button" href="#">Найти гостиницу</a>
   </section>
   <section class="map" id="map">
+    <h2 class="visually-hidden">Карта</h2>
   </section>
 </main>
 <footer class="page-footer">
@@ -136,7 +147,7 @@
     <h3 class="page-footer__hashtag">
       #visitsedona
     </h3>
-    <ul class="social">
+    <ul class="social page-footer__social">
       <li class="social__item">
         <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy" aria-label="twitter">
           <svg width="17px" height="14px">

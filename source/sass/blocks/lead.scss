@@ -14,67 +14,65 @@
   }
 
   &--photogallery {
-    margin-top: 32px;
-    margin-bottom: 52px;
+    margin-bottom: 0;
+    padding: 16px 0 15px;
 
     @media (min-width: $tablet) {
       max-width: 435px;
-      margin-top: 65px;
-      margin-bottom: 80px;
+      padding: 63px 0 64px;
     }
 
     @media (min-width: $desktop) {
-      margin-top: 85px;
-      margin-bottom: 82px;
+      padding: 103px 0 65px;
     }
   }
 
   &--video {
     max-width: 270px;
-    margin-bottom: 32px;
+    margin-bottom: 0;
+    padding: 33px 0 20px 0;
 
     @media (min-width: $tablet) {
-      margin-top: 57px;
       max-width: 445px;
-      margin-bottom: 83px;
+      padding: 57px 0 66px 0;
     }
 
     @media (min-width: $desktop) {
-      margin-top: 0;
-      margin-bottom: 80px;
+      padding: 61px 0 64px;
     }
   }
 
   &--reviews {
-    margin-bottom: 35px;
-    margin-top: 37px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px 0 22px 0;
 
     @media (min-width: $tablet) {
       max-width: 435px;
-      margin-bottom: 87px;
-      margin-top: 66px;
+      padding: 44px 0 69px 0;
     }
 
     @media (min-width: $desktop) {
-      margin-bottom: 61px;
-      margin-top: 97px;
+      padding-top: 112px;
+      padding-bottom: 44px;
     }
   }
 
   &--main {
     max-width: 259px;
-    margin-top: 35px;
+    padding-top: 20px;
     margin-bottom: 15px;
 
     @media (min-width: $tablet) {
       max-width: 485px;
-      margin-top: 48px;
-      margin-bottom: 55px;
+      padding-top: 29px;
+      margin-bottom: 0;
+      padding-bottom: 42px;
     }
 
     @media (min-width: $desktop) {
-      margin-top: 39px;
-      margin-bottom: 44px;
+      padding-top: 56px;
+      padding-bottom: 29px;
     }
   }
 }
@@ -93,24 +91,34 @@
   @media (min-width: $desktop) {
     max-width: 588px;
     margin: 0 auto;
-    padding: 17px 0;
+    margin-bottom: 31px;
   }
 
   &--photogellary {
     @media (min-width: $tablet) {
       font-size: 30px;
+      margin-top: 0;
+      margin-bottom: 33px;
     }
   }
 
   &--video {
+    margin: 0;
+    margin-bottom: 28px;
+
     @media (min-width: $tablet) {
       font-size: 30px;
+      margin-bottom: 33px;
     }
   }
 
   &--reviews {
     @media (min-width: $tablet) {
       font-size: 30px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 35px;
     }
   }
 }

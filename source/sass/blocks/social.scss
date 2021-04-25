@@ -6,12 +6,8 @@
   align-items: center;
   max-width: 151px;
   width: 100%;
-  margin: 0 auto;
-  padding-top: 33px;
-
-  @media (min-width: $tablet) {
-    padding-top: 0;
-  }
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .social__link {

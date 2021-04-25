@@ -11,7 +11,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-bottom: 69px;
+    padding-bottom: 55px;
     width: calc(100% - 120px * 2);
   }
 }
@@ -286,6 +286,7 @@
   &--contacts {
     flex-direction: column;
     margin-bottom: 13px;
+    align-items: flex-start;
 
     @media (min-width: $tablet) {
       margin-bottom: 24px;
@@ -294,10 +295,11 @@
     @media (min-width: $desktop) {
       flex-direction: row;
       min-width: 400px;
+      align-items: center;
 
       &:nth-child(2) {
         min-width: 480px;
-        margin-left: 80px;
+        margin-left: auto;
       }
     }
   }
@@ -359,6 +361,7 @@
       bottom: 1px;
       background-color: $grey-300;
       margin-right: 23px;
+      transition: $anim;
     }
   }
 
@@ -375,22 +378,19 @@
     }
 
     sup {
-      position: static;
       vertical-align: baseline;
       font-size: inherit;
     }
   }
 
   &--contacts {
-    margin-right: auto;
     padding-left: 22px;
     margin-bottom: 6px;
 
     @media (min-width: $desktop) {
-      padding-left: 0;
-      padding-top: 6px;
-      padding-right: 16px;
+      padding: 6px 16px 0 0;
       white-space: nowrap;
+      margin-right: 0;
     }
 
     span {
@@ -477,8 +477,7 @@
 
 .reviews-form__field {
   min-height: 58px;
-  padding-top: 6px;
-  padding-left: 19px;
+  padding: 6px 10px 0 19px;
   margin-top: 2px;
 
   background-color: $grey-300;
@@ -489,6 +488,7 @@
   line-height: inherit;
   font-weight: 700;
   outline: none;
+  transition: $anim;
 
   @media (min-width: $tablet) {
     padding-left: 19px;

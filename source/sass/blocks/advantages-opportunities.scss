@@ -10,12 +10,7 @@
     grid-column: 1/4;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 61px;
-    margin-top: 0;
-  }
-
-  @media (min-width: $desktop) {
-    margin-bottom: 79px;
+    margin: 0;
   }
 }
 
@@ -43,18 +38,19 @@
 
     @media (min-width: $tablet) {
       order: 0;
-      padding: 0 51px;
-    }
-
-    @media (min-width: $desktop) {
-      padding: 0;
+      padding-left: 51px;
+      padding-right: 51px;
     }
   }
 
   @media (min-width: $tablet) {
     display: block;
     text-align: center;
-    margin-top: 59px;
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 78px;
   }
 }
 

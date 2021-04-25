@@ -1,17 +1,25 @@
-let navMain = document.querySelector('.main-nav');
-let navToggle = document.querySelector('.main-nav__toggle');
-
-navMain.classList.remove('main-nav--nojs');
-
-navToggle.addEventListener('click', function () {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
+document.addEventListener("DOMContentLoaded", function () {
+  // М
+  if (document.querySelector(".main-nav__toggle")) {
+    const navMain = document.querySelector('.main-nav');
+    const navToggle = document.querySelector('.main-nav__toggle');
+    // Убираем класс
+    navMain.classList.remove('main-nav--nojs');
+    // Добавляем обработчик события для кнопки
+    navToggle.addEventListener('click', function (event) {
+      event.preventDefault();
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
   }
+
 });
+
 
 if (document.querySelector(".reviews-form__button")) {
   var failurePopUp = document.querySelector(".failure-pop-up"),

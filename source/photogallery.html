@@ -11,37 +11,39 @@
 <body class="page__body">
 <header class="page-header">
   <nav class="main-nav main-nav--opened main-nav--nojs">
-    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">
-            Главная
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active">
-            Фото и видео
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="reviews.html">
-            Форма отзыва
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
-            HTML Academy
-          </a>
-        </li>
-      </ul>
-      <a class="main-nav__logo" href="/">
-      </a>
-      <figure class="page-header__banner page-header__banner--inner">
-        <img class="page-header__slogan page-header__slogan--inner" src="../img/text-sedona-inner.svg" width="460" height="80" alt="Седона»">
-      </figure>
-    </div>
+    <ul class="main-nav__list">
+      <li class="main-nav__item">
+        <a class="main-nav__link main-nav__link--active">
+          Главная
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="photogallery.html">
+          Фото и видео
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="reviews.html">
+          Форма отзыва
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="#">
+          HTML Academy
+        </a>
+      </li>
+    </ul>
+    <a class="main-nav__logo" aria-label="Седона">
+      <span class="visually-hidden">Седона</span>
+    </a>
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
   </nav>
+  <figure class="page-header__banner page-header__banner--inner">
+    <img class="page-header__slogan page-header__slogan--inner" src="img/text-sedona-inner.svg" width="460" height="80" alt="Седона">
+  </figure>
+
 </header>
 <main class="page-main">
   <h1 class="visually-hidden">СЕДОНА — небольшой городок в Аризоне</h1>
@@ -170,20 +172,14 @@
       </div>
       <div class="video-player__control">
         <button class="video-player__button video-player__button--replay" aria-label="Повторить">
-          <svg width="32px" height="20px">
+          <svg width="16px" height="20px">
             <use href="img/sprite.svg#icon-video-replay"></use>
           </svg>
         </button>
         <div class="video-player__progress-bar">
           <div class="video-player__scale">
-            <svg width="540px" height="3px">
-              <use href="img/sprite.svg#volume scale"></use>
-            </svg>
           </div>
           <div class="video-player__progress-toggle">
-            <svg width="11px" height="11px">
-              <use href="img/sprite.svg#volume slider"></use>
-            </svg>
           </div>
         </div>
         <button class="video-player__button video-player__button--cc" aria-label="Показать субтитры">
@@ -192,7 +188,7 @@
           </svg>
         </button>
         <button class="video-player__button video-player__button--fullscreen" aria-label="На весь экран">
-          <svg width="32px" height="20px">
+          <svg width="20px" height="20px">
             <use href="img/sprite.svg#icon-video-fullscreen"></use>
           </svg>
         </button>
@@ -205,7 +201,7 @@
     <h3 class="page-footer__hashtag">
       #visitsedona
     </h3>
-    <ul class="social">
+    <ul class="social page-footer__social">
       <li class="social__item">
         <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy" aria-label="twitter">
           <svg width="17px" height="14px">

@@ -2,9 +2,11 @@
   font-weight: 700;
   font-size: 21px;
   margin: 0;
+  margin-bottom: 33px;
 
   @media (min-width: $tablet) {
     justify-self: start;
+    margin-bottom: 0;
   }
 }
 
@@ -13,6 +15,7 @@
   margin: 0 auto;
   align-items: center;
   padding-top: 37px;
+  padding-bottom: 23px;
 
   @media (min-width: $tablet) {
     display: grid;
@@ -28,13 +31,10 @@
 }
 
 .page-footer__social {
-  margin-top: 32px;
-  margin-right: 1px;
-  display: flex;
-  justify-content: center;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet) {
-    margin-top: 8px;
-    margin-right: 9px;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
