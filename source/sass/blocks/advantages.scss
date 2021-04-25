@@ -1,6 +1,11 @@
 .advantages {
   position: relative;
 
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -14,13 +19,6 @@
     @media (min-width: $tablet) {
       display: none;
     }
-  }
-}
-
-.advantages__grid {
-  @media (min-width: $tablet) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
