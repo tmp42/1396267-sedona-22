@@ -13,6 +13,8 @@
   display: flex;
   justify-content: space-between;
   padding: 21px 0;
+  width: 280px;
+  margin: 0 auto;
 
   @media (min-width: $tablet) {
     padding: 0;
@@ -76,19 +78,32 @@
   }
 
   &--fullscreen {
-    margin-right: 30px;
+    margin-right: 5px;
+
+    @media (min-width: $tablet) {
+      margin-right: 23px;
+    }
+    @media (min-width: $desktop) {
+      margin-right: 25px;
+    }
   }
 
   &--cc {
     margin-left: auto;
-    margin-right: -17px;
+    margin-right: -12px;
 
     @media (min-width: $tablet) {
-      margin-right: -8px;
+      margin-right: 0;
     }
   }
 
   &--replay {
+    margin-left: 19px;
+
+    @media (min-width: $tablet) {
+      margin-left: 29px;
+    }
+
     @media (min-width: $desktop) {
       margin-left: 28px;
     }
@@ -96,11 +111,10 @@
 }
 
 .video-player__scale {
-  margin-top: 5px;
+  margin-top: 6px;
 
   @media (min-width: $tablet) {
     margin-top: 30px;
-    margin-left: 9px;
   }
 }
 
@@ -112,7 +126,7 @@
     width: 389px;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     width: auto;
   }
 }
@@ -121,9 +135,9 @@
   position: absolute;
   bottom: 65px;
   background-color: rgba($color-black, 0.6);
-  left: 20px;
+  left: 0;
   width: 280px;
-  height: 44px;
+  height: 47px;
 
   @media (min-width: $tablet) {
     background-color: transparent;
@@ -132,6 +146,7 @@
     flex-direction: column;
     position: relative;
     bottom: 0;
+    left: 20px;
   }
 }
 
