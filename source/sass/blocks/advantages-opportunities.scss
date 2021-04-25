@@ -2,19 +2,29 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  margin-top: 9px;
+  margin-bottom: 35px;
 
   @media (min-width: $tablet) {
     grid-column: 1/4;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin: 0;
   }
 }
 
 .advantages-opportunities__name {
-  margin-bottom: 0;
-
+  margin-bottom: 16px;
   font-weight: 700;
   font-size: 18px;
+  margin-top: 26px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 21px;
+    margin-top: 20px;
+    font-size: 21px;
+  }
 }
 
 .advantages-opportunities__item {
@@ -23,11 +33,59 @@
 
   text-align: left;
 
+  &:nth-child(2) {
+    order: 1;
+
+    @media (min-width: $tablet) {
+      order: 0;
+      padding-left: 51px;
+      padding-right: 51px;
+    }
+  }
+
   @media (min-width: $tablet) {
     display: block;
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 78px;
   }
 }
 
 .advantages-opportunities__ico {
   grid-row: 1/3;
+  width: 37px;
+  margin-left: 22px;
+  fill: $blue-100;
+
+  @media (min-width: $tablet) {
+    width: auto;
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+.advantages-opportunities__text {
+  margin: 0;
+  line-height: 21px;
+  max-width: 230px;
+
+  @media (min-width: $tablet) {
+    max-width: 194px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 282px;
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: inline-block;
+    }
+  }
 }

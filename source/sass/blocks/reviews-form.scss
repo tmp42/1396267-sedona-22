@@ -6,12 +6,12 @@
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 60px;
+    padding-bottom: 63px;
     width: calc(100% - 60px * 2);
   }
 
   @media (min-width: $desktop) {
-    padding-bottom: 66px;
+    padding-bottom: 55px;
     width: calc(100% - 120px * 2);
   }
 }
@@ -20,6 +20,21 @@
   border: none;
   margin: 0;
   padding: 0;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 1px;
+    background-color: $grey-600;
+    top: -64px;
+    right: -20px;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
 
   &--impression {
     position: relative;
@@ -28,17 +43,18 @@
     @media (min-width: $tablet) {
       order: -1;
       margin-bottom: 0;
-    }
 
-    &::after {
-      position: absolute;
-      content: "";
-      width: 1px;
-      height: 292px;
-      background-color: $grey-600;
-      top: -82px;
-      right: 0;
-      bottom: 36px;
+      &::after {
+        display: inline-block;
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 292px;
+        background-color: $grey-600;
+        top: -82px;
+        right: 0;
+        bottom: 36px;
+      }
     }
   }
 
@@ -72,6 +88,10 @@
 
   &--places {
     margin-bottom: 20px;
+
+    &::after {
+      top: -90px;
+    }
 
     @media (min-width: $tablet) {
       grid-column: 1 / -1;
@@ -125,28 +145,28 @@
       margin-bottom: 21px;
 
       text-align: center;
-    }
 
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      width: 123px;
-      height: 1px;
-      background-color: $grey-600;
-      top: 10px;
-      left: 0;
-    }
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 123px;
+        height: 1px;
+        background-color: $grey-600;
+        top: 10px;
+        left: 0;
+      }
 
-    &::before {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      width: 123px;
-      height: 1px;
-      background-color: $grey-600;
-      top: 10px;
-      right: 0;
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 123px;
+        height: 1px;
+        background-color: $grey-600;
+        top: 10px;
+        right: 0;
+      }
     }
   }
 
@@ -159,28 +179,28 @@
       margin-right: auto;
       text-align: center;
       margin-bottom: 43px;
-    }
 
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      width: 123px;
-      height: 1px;
-      background-color: $grey-600;
-      top: 26px;
-      left: 0;
-    }
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 123px;
+        height: 1px;
+        background-color: $grey-600;
+        top: 26px;
+        left: 0;
+      }
 
-    &::before {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      width: 123px;
-      height: 1px;
-      background-color: $grey-600;
-      top: 26px;
-      right: 0;
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 123px;
+        height: 1px;
+        background-color: $grey-600;
+        top: 26px;
+        right: 0;
+      }
     }
   }
 
@@ -259,13 +279,14 @@
     }
 
     @media (min-width: $desktop) {
-      width: calc(100% / 4 - 40px);
+      width: auto;
     }
   }
 
   &--contacts {
     flex-direction: column;
     margin-bottom: 13px;
+    align-items: flex-start;
 
     @media (min-width: $tablet) {
       margin-bottom: 24px;
@@ -274,10 +295,11 @@
     @media (min-width: $desktop) {
       flex-direction: row;
       min-width: 400px;
+      align-items: center;
 
       &:nth-child(2) {
         min-width: 480px;
-        margin-left: 80px;
+        margin-left: auto;
       }
     }
   }
@@ -339,6 +361,7 @@
       bottom: 1px;
       background-color: $grey-300;
       margin-right: 23px;
+      transition: $anim;
     }
   }
 
@@ -355,22 +378,19 @@
     }
 
     sup {
-      position: static;
       vertical-align: baseline;
       font-size: inherit;
     }
   }
 
   &--contacts {
-    margin-right: auto;
     padding-left: 22px;
     margin-bottom: 6px;
 
     @media (min-width: $desktop) {
-      padding-left: 0;
-      padding-top: 6px;
-      padding-right: 16px;
+      padding: 6px 16px 0 0;
       white-space: nowrap;
+      margin-right: 0;
     }
 
     span {
@@ -390,6 +410,42 @@
     align-items: center;
     grid-column: 1 / -1;
     width: 100%;
+  }
+
+  &--phone {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 57px;
+      height: 57px;
+      background-color: #e5e5e5;
+      background-image: url("../img/icon-phone.svg");
+      background-position: 50% 45%;
+      background-repeat: no-repeat;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &--mail {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 57px;
+      height: 57px;
+      background-color: #e5e5e5;
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 45%;
+      bottom: 0;
+      right: 0;
+    }
   }
 }
 
@@ -421,8 +477,7 @@
 
 .reviews-form__field {
   min-height: 58px;
-  padding-top: 6px;
-  padding-left: 19px;
+  padding: 6px 10px 0 19px;
   margin-top: 2px;
 
   background-color: $grey-300;
@@ -433,6 +488,7 @@
   line-height: inherit;
   font-weight: 700;
   outline: none;
+  transition: $anim;
 
   @media (min-width: $tablet) {
     padding-left: 19px;
@@ -461,8 +517,14 @@
     padding-left: 17px;
 
     @media (min-width: $tablet) {
+      margin-top: 55px;
+      padding-top: 15px;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $desktop) {
       margin-top: 51px;
-      padding-top: 16px;
+      padding-top: 18px;
       margin-bottom: 52px;
     }
   }
@@ -481,6 +543,7 @@
 
   @media (min-width: $tablet) {
     display: block;
+    padding-top: 10px;
   }
 }
 
@@ -503,9 +566,37 @@
   cursor: pointer;
 }
 
+.reviews-form__field--impression:active + .reviews-form__label--impression::before {
+  background-color: $grey-700;
+  cursor: pointer;
+}
+
+.reviews-form__field--impression:active + .reviews-form__label--impression::after {
+  opacity: 0.3;
+}
+
 .reviews-form__field--places:hover + .reviews-form__label--places::before {
   background-color: $grey-400;
   cursor: pointer;
+}
+
+.reviews-form__field--places:active + .reviews-form__label--places::before {
+  background-color: $grey-700;
+  cursor: pointer;
+}
+
+.reviews-form__field--places:active + .reviews-form__label--places::after {
+  opacity: 0.3;
+}
+
+.reviews-form__field--places:checked + .reviews-form__label--places::after {
+  content: "";
+  position: absolute;
+  bottom: 13px;
+  left: 17px;
+  width: 22px;
+  height: 22px;
+  background: url("../img/icon-tick.svg") no-repeat;
 }
 
 .reviews-form__button {

@@ -4,47 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <title>Седона</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="/fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
 <header class="page-header">
-  <nav class="main-nav main-nav--closed main-nav--nojs">
-    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active">
-            Главная
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="photogallery.html">
-            Фото и видео
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="reviews.html">
-            Форма отзыва
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
-            HTML Academy
-          </a>
-        </li>
-      </ul>
-      <a class="main-nav__logo" href="/">
-      </a>
-      <figure class="page-header__banner page-header__banner--inner">
-        <img class="page-header__slogan page-header__slogan--inner" src="../img/text-sedona-inner.svg" width="460" height="80" alt="Седона»">
-      </figure>
-    </div>
+  <nav class="main-nav main-nav--opened main-nav--nojs">
+    <ul class="main-nav__list">
+      <li class="main-nav__item">
+        <a class="main-nav__link main-nav__link--active">
+          Главная
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="photogallery.html">
+          Фото и видео
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="reviews.html">
+          Форма отзыва
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="#">
+          HTML Academy
+        </a>
+      </li>
+    </ul>
+    <a class="main-nav__logo" aria-label="Седона">
+      <span class="visually-hidden">Седона</span>
+    </a>
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
   </nav>
+
+  <figure class="page-header__banner page-header__banner--inner">
+    <img class="page-header__slogan page-header__slogan--inner" src="img/text-sedona-inner.svg" width="460" height="80" alt="Седона">
+  </figure>
+
 </header>
 <main class="page-main">
   <h1 class="visually-hidden">СЕДОНА — небольшой городок в Аризоне</h1>
   <div class="lead lead--reviews">
-    <h2 class="lead__title">Оставьте свой отзыв</h2>
+    <h2 class="lead__title lead__title--reviews">Оставьте свой отзыв</h2>
     <p class="lead__caption">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
       достопримечательностях</p>
   </div>
@@ -62,7 +67,7 @@
       <div class="reviews-form__group">
         <label class="reviews-form__label reviews-form__label--name" for="surname"> Фамилия<sup>*</sup>:
         </label>
-        <input class="reviews-form__field reviews-form__field--name" type="text" name="surname" id="surname" placeholder="Иванов">
+        <input class="reviews-form__field reviews-form__field--name" type="text" name="surname" id="surname" placeholder="Иванов" required="">
       </div>
       <div class="reviews-form__group">
         <label class="reviews-form__label reviews-form__label--name" for="midname"> Отчество:
@@ -78,7 +83,7 @@
           <label class="reviews-form__label reviews-form__label--contacts" for="phone"> <span>Контактный</span> телефон*:
           </label>
           <div class="reviews-form__wrap reviews-form__wrap--phone">
-            <input class="reviews-form__field reviews-form__field--contacts" type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}">
+            <input class="reviews-form__field reviews-form__field--contacts" type="tel" name="phone" id="phone" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}" required="">
           </div>
         </div>
         <div class="reviews-form__group reviews-form__group--contacts">
@@ -132,13 +137,13 @@
           </label>
         </div>
         <div class="reviews-form__group reviews-form__group--places">
-          <input class="visually-hidden reviews-form__field reviews-form__field--places" type="checkbox" name="check3" id="check3">
+          <input class="visually-hidden reviews-form__field reviews-form__field--places" type="checkbox" name="check3" id="check3" checked="">
           <label class="reviews-form__label reviews-form__label--places" for="check3">
             Слайд-парк
           </label>
         </div>
         <div class="reviews-form__group reviews-form__group--places">
-          <input class="visually-hidden reviews-form__field reviews-form__field--places" type="checkbox" name="check4" id="check4" checked="">
+          <input class="visually-hidden reviews-form__field reviews-form__field--places" type="checkbox" name="check4" id="check4">
           <label class="reviews-form__label reviews-form__label--places" for="check4">
             Красные скалы
           </label>
@@ -160,40 +165,52 @@
 </main>
 <footer class="page-footer">
   <div class="page-footer__wrapper">
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy"></a>
-        </li>
-      </ul>
-    </div>
+    <h3 class="page-footer__hashtag">
+      #visitsedona
+    </h3>
+    <ul class="social page-footer__social">
+      <li class="social__item">
+        <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy" aria-label="twitter">
+          <svg width="17px" height="14px">
+            <use href="img/sprite.svg#icon-twitter"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="facebook">
+          <svg width="8px" height="18px">
+            <use href="img/sprite.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy" aria-label="youtube">
+          <svg width="19px" height="14px">
+            <use href="img/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
     <div class="page-footer__copyright copyright">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <span class="copyright__text">Разработано</span>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09">
+          <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
+        </svg>
+      </a>
     </div>
   </div>
 </footer>
+<section class="failure-pop-up">
+  <h2 class="failure-pop-up__title">Что-то пошло&#160;<br>не так!</h2>
+  <p class="failure-pop-up__text">Проверьте поля выделенные красным, скорее всего вы забыли их заполнить.</p>
+  <button class="failure-pop-up__button button">Ok</button>
+</section>
+<section class="success-pop-up">
+  <h2 class="success-pop-up__title">Ваш отзыв отправлен!</h2>
+  <p class="success-pop-up__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+    <button class="button success-pop-up__button">Закрыть окно</button>
+</section>
 </body>
-<script>
-  let navMain = document.querySelector('.main-nav');
-  let navToggle = document.querySelector('.main-nav__toggle');
-
-  navMain.classList.remove('main-nav--nojs');
-
-  navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-</script>
+<script src="js/script.min.js"></script>
 </html>

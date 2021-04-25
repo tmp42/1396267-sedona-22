@@ -1,0 +1,11 @@
+.video {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 88px;
+  }
+}

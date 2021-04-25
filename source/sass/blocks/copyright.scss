@@ -1,3 +1,33 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  //padding-top: 40px;
+
+  @media (min-width: $tablet) {
+    justify-self: right;
+    padding-top: 7px;
+  }
+}
+
+.copyright__link {
+  &:hover {
+    svg {
+      fill: $blue-800;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    svg {
+      fill: $color-black;
+    }
+  }
+}
+
 .copyright__text {
+  margin-top: 4px;
+  margin-right: 12px;
+
   font-size: 14px;
 }

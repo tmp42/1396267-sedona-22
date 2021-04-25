@@ -2,7 +2,7 @@
   display: inline-block;
   padding: 18px 30px 14px 31px;
 
-  font: inherit;
+  //font: inherit;
   font-weight: 700;
   font-size: 21px;
   color: $white-100;
@@ -11,9 +11,22 @@
   border: none;
   text-transform: uppercase;
   text-align: center;
+  cursor: pointer;
+  transition: $anim;
+  font-family: $font;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $blue-200;
-    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $blue-700;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: $grey-400;
+    cursor: not-allowed;
   }
 }

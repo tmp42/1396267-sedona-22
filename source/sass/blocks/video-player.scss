@@ -1,0 +1,145 @@
+.video-player {
+  position: relative;
+
+  @media (min-width: $tablet) {
+    max-width: 648px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 800px;
+  }
+}
+
+.video-player__control {
+  position: relative;
+  background-color: $grey-300;
+  display: flex;
+  padding: 23px 18px 21px 25px;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba($color-black, 0.6);
+    height: 93px;
+    padding: 0 36px 0 35px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 800px;
+  }
+}
+
+.video-player__button {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+
+  & svg {
+    fill: $blue-500;
+
+    @media (min-width: $tablet) {
+      fill: $white-100;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    svg {
+      fill: $black-200;
+
+      @media (min-width: $tablet) {
+        fill: $white-100;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    svg {
+      fill: $black-200;
+
+      @media (min-width: $tablet) {
+        fill: $white-100;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--fullscreen {
+    margin-right: 5px;
+  }
+
+  &--cc {
+    margin-right: 31px;
+  }
+
+  &--replay {
+    margin-right: auto;
+  }
+}
+
+.video-player__scale {
+  position: absolute;
+  width: calc(100% - 44px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.video-player__scale svg {
+  fill: $white-100;
+  width: 235px;
+
+  @media (min-width: $tablet) {
+    width: 389px;
+  }
+
+  @media (min-width: $desktop) {
+    width: auto;
+  }
+}
+
+.video-player__progress-bar {
+  position: absolute;
+  bottom: 65px;
+  background-color: rgba($color-black, 0.6);
+  left: 0;
+  width: 100%;
+  min-height: 47px;
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+    margin: 0 20px;
+  }
+}
+
+.video-player__progress-toggle {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: $white-100;
+  top: 50%;
+  transform: translate(58px, -50%);
+
+  @media (min-width: $tablet) {
+    transform: translate(135px, -50%);
+  }
+}

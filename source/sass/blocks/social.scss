@@ -1,5 +1,38 @@
-.social__list {
+.social {
   list-style: none;
-  margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 151px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social__link {
+  width: 46px;
+  height: 48px;
+  background-color: $blue-100;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: $anim;
+
+  &:hover,
+  &:focus {
+    background-color: $blue-600;
+  }
+
+  &:active {
+    background-color: $blue-700;
+
+    svg {
+      opacity: 0.3;
+    }
+  }
+}
+
+.social__link svg {
+  fill: $white-100;
 }
