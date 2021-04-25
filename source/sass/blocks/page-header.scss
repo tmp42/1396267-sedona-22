@@ -51,13 +51,16 @@
     min-height: 158px;
     width: 100%;
     margin-bottom: 0;
+    background-size: 240%;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-position-y: bottom;
     padding: 30px 0 0 0;
 
     @media (min-width: $tablet) {
       min-height: 290px;
       padding-top: 94px;
+      background-size: 100%;
+      background-position-y: bottom;
     }
 
     @media (min-width: $desktop) {

@@ -77,7 +77,7 @@
       padding: 44px 20px 62px;
     }
 
-    &::after {
+    &:not(:last-child)::after {
       position: absolute;
       content: "";
       left: 20px;

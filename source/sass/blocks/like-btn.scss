@@ -5,8 +5,12 @@
 
   @media (min-width: $tablet) {
     max-width: unset;
-    width: auto;
+    width: 63px;
     margin-left: auto;
+  }
+
+  @media (min-width: $desktop) {
+    width: 65px;
   }
 }
 
@@ -24,6 +28,10 @@
 .like-btn__ico {
   fill: rgba($color-black, 0.3);
   margin-right: 15px;
+
+  @media (min-width: $tablet) {
+    margin-right: 10px;
+  }
 
   @media (min-width: $desktop) {
     fill: $white-100;
