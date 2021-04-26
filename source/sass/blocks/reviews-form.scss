@@ -101,7 +101,6 @@
       grid-column: 1 / -1;
       position: relative;
       margin-bottom: 0;
-
     }
 
     @media (min-width: $desktop) {
@@ -236,6 +235,7 @@
     @media (min-width: $tablet) {
       margin-bottom: 0;
       text-align: center;
+
       &::after {
         position: absolute;
         content: "";
