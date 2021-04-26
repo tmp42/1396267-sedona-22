@@ -20,13 +20,9 @@
 
 .gallery__item {
   position: relative;
-  padding: 23px 0 16px 0;
-  width: calc(100% - 40px);
-  margin-left: auto;
-  margin-right: auto;
+  padding: 23px 20px 16px;
 
   @media (min-width: $tablet) {
-    width: 100%;
     padding: 0;
   }
 

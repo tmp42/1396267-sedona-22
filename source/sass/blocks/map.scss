@@ -5,6 +5,10 @@
   background-size: cover;
   background-position: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet) {
     background-image: url("../img/bg-map-tablet@1x.jpg");
 

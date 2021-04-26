@@ -25,11 +25,12 @@
   &::after {
     position: absolute;
     content: "";
-    width: 320px;
+    width: 1000%;
     height: 1px;
     background-color: $grey-600;
     top: -64px;
-    right: -20px;
+    left: 50%;
+    transform: translateX(-50%);
 
     @media (min-width: $tablet) {
       display: none;
@@ -54,6 +55,8 @@
         top: -82px;
         right: 0;
         bottom: 36px;
+        left: unset;
+        transform: unset;
       }
     }
   }
@@ -89,6 +92,7 @@
   &--places {
     margin-bottom: 20px;
 
+
     &::after {
       top: -90px;
     }
@@ -97,6 +101,7 @@
       grid-column: 1 / -1;
       position: relative;
       margin-bottom: 0;
+
     }
 
     @media (min-width: $desktop) {
@@ -121,9 +126,10 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 57px;
-
+    width: 100%;
     font-size: 21px;
     text-align: left;
+    position: relative;
   }
 
   &--name {
@@ -143,7 +149,8 @@
 
     @media (min-width: $tablet) {
       margin-bottom: 21px;
-
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
 
       &::after {
@@ -181,7 +188,6 @@
     margin-bottom: 22px;
 
     @media (min-width: $tablet) {
-      max-width: 308px;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
@@ -216,6 +222,10 @@
         width: 280px;
       }
     }
+
+    span {
+      display: block;
+    }
   }
 
   &--emotions {
@@ -225,7 +235,7 @@
 
     @media (min-width: $tablet) {
       margin-bottom: 0;
-
+      text-align: center;
       &::after {
         position: absolute;
         content: "";
@@ -328,7 +338,7 @@
 
 .reviews-form__label {
   margin-right: 14px;
-
+  cursor: pointer;
   font-size: 14px;
 
   &--impression {
@@ -349,6 +359,7 @@
       background-color: $grey-300;
       border-radius: 50%;
       margin-right: 23px;
+      flex-shrink: 0;
 
       @media (min-width: $tablet) {
         margin-right: 21px;
@@ -579,7 +590,8 @@
   border-radius: 50%;
   margin-right: 23px;
   left: 17px;
-  top: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .reviews-form__field--impression:hover + .reviews-form__label--impression::before,
