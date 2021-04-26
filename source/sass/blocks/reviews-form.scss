@@ -442,7 +442,7 @@
       position: absolute;
       width: 57px;
       height: 57px;
-      background-color: #e5e5e5;
+      background-color: $grey-400;
       background-image: url("../img/icon-phone.svg");
       background-position: 50% 45%;
       background-repeat: no-repeat;
@@ -460,7 +460,7 @@
       position: absolute;
       width: 57px;
       height: 57px;
-      background-color: #e5e5e5;
+      background-color: $grey-400;
       background-image: url("../img/icon-mail.svg");
       background-repeat: no-repeat;
       background-position: 50% 45%;
@@ -575,7 +575,7 @@
   position: absolute;
   width: 21px;
   height: 21px;
-  background-color: #000000;
+  background-color: $black-100;
   border-radius: 50%;
   margin-right: 23px;
   left: 17px;
