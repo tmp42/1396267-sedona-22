@@ -44,12 +44,13 @@
 
   &--reviews {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: -30px;
     padding: 20px 0 22px 0;
 
     @media (min-width: $tablet) {
       max-width: 435px;
       padding: 38px 0 75px;
+      margin-bottom: 0;
     }
 
     @media (min-width: $desktop) {
