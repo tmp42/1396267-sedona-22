@@ -11,7 +11,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-bottom: 55px;
+    padding-bottom: 68px;
     width: calc(100% - 120px * 2);
   }
 }
@@ -168,6 +168,13 @@
         right: 0;
       }
     }
+
+    @media (min-width: $desktop) {
+      &::after,
+      &::before {
+        width: 280px;
+      }
+    }
   }
 
   &--places {
@@ -202,6 +209,13 @@
         right: 0;
       }
     }
+
+    @media (min-width: $desktop) {
+      &::after,
+      &::before {
+        width: 280px;
+      }
+    }
   }
 
   &--emotions {
@@ -232,6 +246,13 @@
         background-color: $grey-600;
         top: 9px;
         right: 0;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      &::after,
+      &::before {
+        width: 280px;
       }
     }
   }
@@ -561,12 +582,13 @@
   top: 16px;
 }
 
-.reviews-form__field--impression:hover + .reviews-form__label--impression::before {
+.reviews-form__field--impression:hover + .reviews-form__label--impression::before,
+.reviews-form__field--impression:focus + .reviews-form__label--impression::before {
   background-color: $grey-400;
   cursor: pointer;
 }
 
-.reviews-form__field--impression:active + .reviews-form__label--impression::before {
+.reviews-form__field--impression:active + .reviews-form__label--impression::before, {
   background-color: $grey-700;
   cursor: pointer;
 }
@@ -575,7 +597,8 @@
   opacity: 0.3;
 }
 
-.reviews-form__field--places:hover + .reviews-form__label--places::before {
+.reviews-form__field--places:hover + .reviews-form__label--places::before,
+.reviews-form__field--places:focus + .reviews-form__label--places::before {
   background-color: $grey-400;
   cursor: pointer;
 }

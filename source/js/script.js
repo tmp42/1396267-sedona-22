@@ -31,22 +31,10 @@ if (document.querySelector(".reviews-form__button")) {
   failurePopUp.classList.remove("failure-pop-up--visible");
   successPopUp.classList.remove("success-pop-up--visible");
 
-  console.log(inputs);
-
-// заполнены важные поля
-  var ok = [];
-
-//подписка за событие о заполнении инпутов
-  Array.from(inputs).forEach(function (el) {
-    el.addEventListener("change", function () {
-      ok.push(el);
-    });
-  })
-
 //обработка клика отправки формы -> показ модальных окон
   btn.addEventListener("click", function (event) {
     event.preventDefault();
-    var err = Array.from(inputs).find(function (el) {
+    Array.from(inputs).find(function (el) {
       if (el.value == "") {
         failurePopUp.classList.add("failure-pop-up--visible");
       } else {
